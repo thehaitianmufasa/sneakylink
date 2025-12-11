@@ -46,7 +46,7 @@
         "Test validation (must be positive integer)",
         "Verify number input type"
       ],
-      "passes": false,
+      "passes": true,
       "blocked_by": [
         "onboarding-page1-layout"
       ],

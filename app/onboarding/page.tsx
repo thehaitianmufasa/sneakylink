@@ -55,10 +55,23 @@ export default function OnboardingPage() {
     return true
   }
 
+  const validateEmployeeCount = () => {
+    const count = parseInt(formData.employeeCount)
+    if (!formData.employeeCount || isNaN(count) || count < 1) {
+      setErrors(prev => ({ ...prev, employeeCount: 'Employee count must be a positive number' }))
+      return false
+    }
+    setErrors(prev => ({ ...prev, employeeCount: '' }))
+    return true
+  }
+
   const handleNext = () => {
     if (currentPage === 1) {
       // Validate before proceeding
-      if (!validateCompanyName()) {
+      const isCompanyNameValid = validateCompanyName()
+      const isEmployeeCountValid = validateEmployeeCount()
+
+      if (!isCompanyNameValid || !isEmployeeCountValid) {
         return
       }
       setCurrentPage(2)
@@ -159,11 +172,27 @@ export default function OnboardingPage() {
                   id="employeeCount"
                   type="number"
                   value={formData.employeeCount}
-                  onChange={(e) => setFormData({ ...formData, employeeCount: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-trust-blue focus:border-transparent transition-all"
+                  onChange={(e) => {
+                    setFormData({ ...formData, employeeCount: e.target.value })
+                    // Clear error when user starts typing
+                    if (errors.employeeCount) {
+                      setErrors({ ...errors, employeeCount: '' })
+                    }
+                  }}
+                  onBlur={validateEmployeeCount}
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent transition-all ${
+                    errors.employeeCount
+                      ? 'border-danger-red focus:ring-danger-red'
+                      : 'border-gray-300 focus:ring-trust-blue'
+                  }`}
                   placeholder="Enter number of employees"
                   min="1"
                 />
+                {errors.employeeCount && (
+                  <p className="mt-2 text-sm text-danger-red font-medium">
+                    {errors.employeeCount}
+                  </p>
+                )}
               </div>
 
               {/* Work Types Checkboxes */}
