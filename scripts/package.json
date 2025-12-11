@@ -1,0 +1,31 @@
+{
+  "name": "nevermisslead-automation-scripts",
+  "version": "1.0.0",
+  "description": "Automation scripts for NeverMissLead client onboarding",
+  "private": true,
+  "scripts": {
+    "setup-client": "node setup-supabase-client.js",
+    "provision-number": "node provision-twilio-number.js",
+    "generate-config": "node generate-config.js",
+    "onboard": "bash onboard-client.sh"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.0",
+    "@vercel/sdk": "^1.0.0",
+    "twilio": "^4.19.0",
+    "csv-parse": "^5.5.2",
+    "dotenv": "^16.3.1",
+    "yargs": "^17.7.2",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "inquirer": "^8.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "CherySolutions",
+  "license": "MIT"
+}

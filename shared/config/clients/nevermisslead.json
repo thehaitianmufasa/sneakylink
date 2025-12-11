@@ -1,0 +1,574 @@
+{
+  "slug": "nevermisslead",
+  "clientId": "00000000-0000-0000-0000-000000000001",
+  "enabled": true,
+  "version": "1.0.0",
+  "businessInfo": {
+    "businessName": "ClimateGuard HVAC",
+    "operatingName": "ClimateGuard HVAC",
+    "legalName": "ClimateGuard HVAC Services LLC",
+    "industry": "HVAC (Heating, Ventilation, Air Conditioning)",
+    "yearsInBusiness": "15+ years",
+    "tagline": "HVAC Specialists",
+    "contact": {
+      "primaryPhone": "(678) 788-7281",
+      "emailDisplay": "info@nevermisslead.com",
+      "emailRouting": "jeff@cherysolutions.com",
+      "businessAddress": "1234 Peachtree Industrial Blvd, Atlanta, GA 30341",
+      "serviceHours": "24/7 Emergency Service Available"
+    }
+  },
+  "hero": {
+    "eyebrow": "HEATING | COOLING | 24/7 EMERGENCY",
+    "mainHeadline": "Climate Control Heating & Cooling Experts in 60 Minutes",
+    "subheadline": "Licensed NATE Technicians \u2022 Same-Day Service \u2022 100% Satisfaction Guaranteed",
+    "backgroundImage": "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=1920&q=80",
+    "primaryCTA": {
+      "text": "GET FREE ESTIMATE",
+      "action": "form",
+      "value": "#contact-form",
+      "style": "primary"
+    },
+    "secondaryCTA": {
+      "text": "CALL (678) 788-7281",
+      "action": "phone",
+      "value": "tel:+16787887281",
+      "style": "secondary"
+    }
+  },
+  "trustBadges": [
+    {
+      "icon": "\u26a1",
+      "text": "60-Min Response",
+      "order": 1
+    },
+    {
+      "icon": "\ud83c\udfc6",
+      "text": "NATE Certified",
+      "order": 2
+    },
+    {
+      "icon": "\u2b50",
+      "text": "15+ Years",
+      "order": 3
+    },
+    {
+      "icon": "\u2705",
+      "text": "100% Guaranteed",
+      "order": 4
+    }
+  ],
+  "about": {
+    "eyebrow": "ABOUT CLIMATEGUARD HVAC",
+    "heading": "Atlanta's Most Trusted HVAC Team",
+    "description": "For over 15 years, ClimateGuard HVAC has been Atlanta's go-to emergency HVAC specialists. We built our reputation on speed, reliability, and honest service\u2014responding within 60 minutes when you need us most.",
+    "paragraphs": [
+      "For over 15 years, ClimateGuard HVAC has been Atlanta's go-to emergency HVAC specialists. We built our reputation on speed, reliability, and honest service\u2014responding within 60 minutes when you need us most.",
+      "Our NATE-certified technicians handle everything from emergency repairs to complete system replacements, always putting your comfort first. Family-owned and locally operated, we treat every home like our own."
+    ],
+    "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80",
+    "features": [
+      "Licensed & Insured",
+      "NATE Certified Techs",
+      "Upfront Pricing",
+      "90-Day Warranty"
+    ],
+    "yearsBadge": {
+      "value": "15+",
+      "label": "Years Serving Atlanta"
+    },
+    "ctaText": "GET FREE ESTIMATE"
+  },
+  "services": [
+    {
+      "title": "Emergency AC Repair",
+      "icon": "snowflake",
+      "description": "AC down? We respond in 60 minutes. Available 24/7 for cooling emergencies.",
+      "order": 1,
+      "featured": true
+    },
+    {
+      "title": "Emergency Heating Repair",
+      "icon": "flame",
+      "description": "Furnace failure? Same-day emergency heating repair to restore warmth fast.",
+      "order": 2,
+      "featured": true
+    },
+    {
+      "title": "AC Installation & Replacement",
+      "icon": "wind",
+      "description": "New AC systems installed right. Energy-efficient units with lifetime support.",
+      "order": 3
+    },
+    {
+      "title": "Heating System Installation",
+      "icon": "thermometer",
+      "description": "Complete furnace and heat pump installation. Stay warm all winter long.",
+      "order": 4
+    },
+    {
+      "title": "HVAC Maintenance Plans",
+      "icon": "wrench",
+      "description": "Prevent breakdowns before they happen. Annual maintenance keeps systems running.",
+      "order": 5
+    },
+    {
+      "title": "Duct Cleaning & Sealing",
+      "icon": "wind",
+      "description": "Improve air quality and efficiency. Professional duct cleaning and repair.",
+      "order": 6
+    },
+    {
+      "title": "Smart Thermostat Install",
+      "icon": "gauge",
+      "description": "Save money with smart temperature control. Expert thermostat installation.",
+      "order": 7
+    },
+    {
+      "title": "Indoor Air Quality",
+      "icon": "leaf",
+      "description": "Breathe easier with air purification, humidity control, and filtration systems.",
+      "order": 8
+    }
+  ],
+  "process": {
+    "heading": "How We Get You Back to Comfort Fast",
+    "subheading": "Our proven emergency response process",
+    "steps": [
+      {
+        "icon": "phone",
+        "title": "Call or Text Us",
+        "description": "Reach us 24/7 for immediate help",
+        "order": 1
+      },
+      {
+        "icon": "clock",
+        "title": "60-Minute Response",
+        "description": "Technician dispatched to you fast",
+        "order": 2
+      },
+      {
+        "icon": "wrench",
+        "title": "Expert Diagnosis",
+        "description": "We identify the problem quickly",
+        "order": 3
+      },
+      {
+        "icon": "tools",
+        "title": "Fast Repair",
+        "description": "Most repairs done same visit",
+        "order": 4
+      },
+      {
+        "icon": "clipboard-check",
+        "title": "Satisfaction Guaranteed",
+        "description": "You pay only when satisfied",
+        "order": 5
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "How fast can you respond to an HVAC emergency?",
+      "answer": "We guarantee a 60-minute response time for all emergency calls in the Atlanta metro area. Our technicians are on-call 24/7, including weekends and holidays. When your system fails, we're already on our way.",
+      "order": 1
+    },
+    {
+      "question": "Do you offer financing for HVAC system replacements?",
+      "answer": "Yes. We offer flexible financing options with approved credit for new system installations and major repairs. Ask about our current 0% APR financing promotions. We believe everyone deserves comfortable temperatures, regardless of budget.",
+      "order": 2
+    },
+    {
+      "question": "Are your technicians certified and background-checked?",
+      "answer": "Absolutely. All NeverMissLead technicians are NATE-certified, EPA licensed, and undergo rigorous background checks. We also require ongoing training to stay current on the latest HVAC technology. You can trust who enters your home.",
+      "order": 3
+    },
+    {
+      "question": "What areas do you service in metro Atlanta?",
+      "answer": "We serve all of metro Atlanta including Fulton, DeKalb, Cobb, Gwinnett, and surrounding counties. If you're in the Atlanta area and need HVAC help, we can reach you within 60 minutes for emergencies.",
+      "order": 4
+    },
+    {
+      "question": "Do you provide warranties on repairs and installations?",
+      "answer": "Yes. All repairs come with a 90-day labor warranty. New system installations include manufacturer warranties up to 10 years on parts, plus our lifetime service guarantee. We stand behind every job we complete.",
+      "order": 5
+    }
+  ],
+  "serviceAreas": {
+    "heading": "Serving All of Metro Atlanta",
+    "cities": [
+      "Midtown Atlanta",
+      "Buckhead",
+      "Virginia Highland",
+      "Decatur",
+      "Sandy Springs",
+      "Marietta",
+      "Roswell",
+      "Alpharetta",
+      "Dunwoody",
+      "Brookhaven",
+      "Chamblee",
+      "Smyrna",
+      "East Point",
+      "College Park",
+      "Tucker",
+      "Lawrenceville"
+    ],
+    "counties": [
+      "Fulton County",
+      "DeKalb County",
+      "Cobb County",
+      "Gwinnett County",
+      "Clayton County"
+    ]
+  },
+  "businessHours": {
+    "Monday": "24/7 Emergency Service",
+    "Tuesday": "24/7 Emergency Service",
+    "Wednesday": "24/7 Emergency Service",
+    "Thursday": "24/7 Emergency Service",
+    "Friday": "24/7 Emergency Service",
+    "Saturday": "24/7 Emergency Service",
+    "Sunday": "24/7 Emergency Service",
+    "regularHours": {
+      "weekday": "Monday-Friday: 7:00 AM - 7:00 PM",
+      "saturday": "Saturday: 8:00 AM - 5:00 PM",
+      "sunday": "Sunday: Emergency calls only"
+    }
+  },
+  "ctaCopy": {
+    "primaryCTAs": [
+      "GET A FREE QUOTE",
+      "Call Now: (678) 788-7281",
+      "Schedule Service Today",
+      "Request Free Quote",
+      "Text Us for Faster Response"
+    ],
+    "emergencyBanner": "🔴 HVAC EMERGENCY? Call (678) 788-7281 - We Respond in 60 Minutes!",
+    "footerCTA": "Don't wait for your HVAC to fail. Call Atlanta's fastest response team now."
+  },
+  "sms": {
+    "autoResponse": "Thanks for texting NeverMissLead powered by CherySolutions. To get a quote please visit https://nevermisslead.com",
+    "enabled": true
+  },
+  "socialProof": {
+    "heading": "Why Atlanta Homeowners Choose Us",
+    "stats": {
+      "rating": "4.9/5",
+      "totalReviews": "500+ Five-Star Reviews",
+      "awards": [
+        "Best HVAC Service 2024",
+        "BBB A+ Rated"
+      ],
+      "certifications": [
+        "NATE Certified",
+        "EPA Licensed",
+        "Licensed & Insured"
+      ]
+    },
+    "testimonials": [
+      {
+        "quote": "We went from missing every after-hours call to capturing 100% of leads. The ROI was immediate.",
+        "author": "Marcus R.",
+        "location": "Owner, Rodriguez & Sons Plumbing",
+        "rating": 5,
+        "order": 1,
+        "image": "/images/testimonials/marcus-plumbing.png"
+      },
+      {
+        "quote": "I was skeptical until I saw the dashboard. We were losing $4,200/month in missed calls. Now we capture every single one.",
+        "author": "David K.",
+        "location": "Owner, Summit Heating & Air",
+        "rating": 5,
+        "order": 2,
+        "image": "/images/testimonials/david-hvac.png"
+      },
+      {
+        "quote": "The SMS auto-reply alone is worth the price. Customers love getting instant responses, even at 2 AM.",
+        "author": "James T.",
+        "location": "Owner, Precision Electric Co.",
+        "rating": 5,
+        "order": 3,
+        "image": "/images/testimonials/james-electrical.png"
+      }
+    ]
+  },
+  "valuePropositions": {
+    "heading": "The NeverMissLead Difference",
+    "differentiators": [
+      "\u2713 60-Minute Emergency Response - We mean it",
+      "\u2713 Upfront Pricing - No hidden fees or surprise charges",
+      "\u2713 NATE-Certified Technicians - Experts you can trust",
+      "\u2713 Same-Day Service - Most repairs completed first visit",
+      "\u2713 90-Day Repair Warranty - All work guaranteed",
+      "\u2713 24/7 Availability - Nights, weekends, holidays",
+      "\u2713 Family-Owned & Local - We live here too",
+      "\u2713 Flexible Financing - Affordable payment options"
+    ]
+  },
+  "specialOffers": [
+    {
+      "icon": "\ud83c\udf81",
+      "title": "NEW CUSTOMER SPECIAL",
+      "description": "$49 HVAC System Diagnostic (Regular $129 - Save $80)",
+      "enabled": true,
+      "order": 1
+    },
+    {
+      "icon": "\u2744\ufe0f",
+      "title": "SPRING AC TUNE-UP",
+      "description": "$89 Complete System Check - Includes 18-Point Inspection",
+      "enabled": true,
+      "order": 2
+    },
+    {
+      "icon": "\ud83d\udd25",
+      "title": "FALL HEATING SPECIAL",
+      "description": "10% Off Furnace Repair - Mention this offer when booking",
+      "enabled": true,
+      "order": 3
+    }
+  ],
+  "finalCTA": {
+    "heading": "Don't Wait for Your HVAC to Fail",
+    "subheading": "Call Atlanta's fastest HVAC response team now",
+    "description": "Whether it's an emergency breakdown or preventive maintenance, NeverMissLead HVAC is ready to help. With 15+ years serving Atlanta, we've seen it all\u2014and fixed it all. Our 60-minute emergency response and same-day service mean you're never left in the heat or cold.",
+    "primaryCTA": {
+      "text": "Call (678) 788-7281 Now",
+      "action": "phone",
+      "value": "tel:+16787887281",
+      "style": "inverse"
+    },
+    "secondaryCTA": {
+      "text": "Schedule Online",
+      "action": "form",
+      "value": "#contact-form",
+      "style": "secondary"
+    }
+  },
+  "footer": {
+    "tagline": "Atlanta's Most Trusted HVAC Service Since 2009",
+    "quickLinks": [
+      {
+        "text": "Home",
+        "href": "/",
+        "order": 1
+      },
+      {
+        "text": "Emergency Service",
+        "href": "#emergency",
+        "order": 2
+      },
+      {
+        "text": "Services",
+        "href": "#services",
+        "order": 3
+      },
+      {
+        "text": "About Us",
+        "href": "#about",
+        "order": 4
+      },
+      {
+        "text": "Service Areas",
+        "href": "#service-areas",
+        "order": 5
+      },
+      {
+        "text": "Reviews",
+        "href": "#reviews",
+        "order": 6
+      },
+      {
+        "text": "Contact",
+        "href": "#contact",
+        "order": 7
+      },
+      {
+        "text": "Financing",
+        "href": "#financing",
+        "order": 8
+      }
+    ],
+    "servicesLinks": [
+      {
+        "text": "Emergency AC Repair",
+        "href": "#services",
+        "order": 1
+      },
+      {
+        "text": "Emergency Heating Repair",
+        "href": "#services",
+        "order": 2
+      },
+      {
+        "text": "AC Installation",
+        "href": "#services",
+        "order": 3
+      },
+      {
+        "text": "Heating Installation",
+        "href": "#services",
+        "order": 4
+      },
+      {
+        "text": "Maintenance Plans",
+        "href": "#services",
+        "order": 5
+      },
+      {
+        "text": "Duct Cleaning",
+        "href": "#services",
+        "order": 6
+      },
+      {
+        "text": "Thermostat Install",
+        "href": "#services",
+        "order": 7
+      },
+      {
+        "text": "Air Quality Services",
+        "href": "#services",
+        "order": 8
+      }
+    ],
+    "contactInfo": {
+      "businessName": "NeverMissLead HVAC",
+      "address": "1234 Peachtree Industrial Blvd, Atlanta, GA 30341",
+      "phone": "(678) 788-7281",
+      "email": "info@nevermisslead.com",
+      "credentials": [
+        "Licensed & Insured",
+        "NATE Certified",
+        "GA License #XXXXXXX",
+        "EPA Certified"
+      ]
+    },
+    "legalLinks": [
+      {
+        "text": "Privacy Policy",
+        "href": "/privacy",
+        "order": 1
+      },
+      {
+        "text": "Terms of Service",
+        "href": "/terms",
+        "order": 2
+      },
+      {
+        "text": "Accessibility",
+        "href": "/accessibility",
+        "order": 3
+      }
+    ],
+    "copyright": "\u00a9 2025 NeverMissLead HVAC. All rights reserved."
+  },
+  "seo": {
+    "pageTitle": "Emergency HVAC Atlanta | 60-Min Response | NeverMissLead",
+    "metaDescription": "Atlanta fast emergency HVAC service with 60-minute response. 24/7 AC & heating repair, installation, maintenance. Licensed, insured & trusted.",
+    "keywords": [
+      "Emergency HVAC Atlanta",
+      "24/7 AC repair Atlanta",
+      "Fast HVAC service",
+      "Same-day heating repair",
+      "Atlanta HVAC emergency",
+      "60-minute HVAC response",
+      "HVAC contractor Atlanta",
+      "AC installation Atlanta",
+      "Furnace repair Atlanta",
+      "NATE certified HVAC"
+    ]
+  },
+  "branding": {
+    "colors": {
+      "primary": "#D32F2F",
+      "secondary": "#1976D2",
+      "accent": "#F57C00",
+      "neutral": {
+        "dark": "#2C3E50",
+        "light": "#F5F5F5",
+        "white": "#FFFFFF"
+      }
+    },
+    "logo": {
+      "text": "CLIMATEGUARD",
+      "tagline": "HVAC SPECIALISTS",
+      "image": {
+        "src": "/assets/hvac/hvac-logo.png",
+        "alt": "ClimateGuard HVAC logo",
+        "priority": true
+      }
+    },
+    "typography": {
+      "headingFont": "Roboto Bold",
+      "bodyFont": "Roboto"
+    }
+  },
+  "integrations": {
+    "google": {
+      "businessProfile": {
+        "name": "NeverMissLead HVAC",
+        "category": "HVAC Contractor"
+      },
+      "reviewsWidget": {
+        "enabled": true,
+        "minRating": 4
+      }
+    },
+    "twilio": {
+      "trackingNumber": "+16787887281",
+      "forwardToNumber": "+17186885932",
+      "smsEnabled": true,
+      "voiceEnabled": true,
+      "recordCalls": true
+    }
+  },
+  "features": {
+    "showSpecialOffers": true,
+    "enableLiveChat": false,
+    "enableOnlineBooking": true,
+    "showBlog": false,
+    "showGallery": false,
+    "hideFinalCTA": true,
+    "hideFooter": true
+  },
+  "servicesSection": {
+    "heading": "Emergency & Routine|HVAC Services",
+    "description": "From midnight emergencies to planned upgrades, we keep Atlanta comfortable year-round"
+  },
+  "socialMedia": {
+    "heading": "Follow Our Work on Social Media",
+    "subheading": "See real projects, helpful tips, and satisfied customers. Join our growing community!",
+    "links": [
+      {
+        "platform": "facebook",
+        "url": "https://facebook.com/climateguardhvac",
+        "label": "Facebook"
+      },
+      {
+        "platform": "instagram",
+        "url": "https://instagram.com/climateguardhvac",
+        "label": "Instagram"
+      },
+      {
+        "platform": "twitter",
+        "url": "https://twitter.com/climateguardhvac",
+        "label": "Twitter"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&q=80",
+      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&q=80"
+    ]
+  },
+  "ctaBanner": {
+    "heading": "HVAC Emergency?",
+    "subheading": "We respond in 60 minutes. Call now for immediate help.",
+    "primaryCTA": {
+      "text": "CALL (678) 788-7281"
+    },
+    "secondaryCTA": {
+      "text": "GET FREE ESTIMATE"
+    }
+  }
+}

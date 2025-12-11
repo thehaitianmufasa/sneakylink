@@ -1,0 +1,300 @@
+﻿MVP Coverage Checklist - Vendor Compliance Prep SaaS
+Goal: Ensure we handle 100% of the core vendor journey (except customer-specific questions they fill themselves)
+________________
+
+
+PHASE 1: AWARENESS ✓
+What we handle:
+* [ ] Landing page with value prop
+* [ ] Clear pricing ($297/mo)
+* [ ] Social proof (Coke vendor testimonial)
+* [ ] Time estimate (30 min first time, 2 min repeats)
+* [ ] "Get Started" button
+Status: Simple. Not our focus for MVP. Can be basic.
+________________
+
+
+PHASE 2: SIGNUP ✓
+What we handle:
+* [ ] Email input field
+* [ ] Password input field
+* [ ] Google signin option (via Clerk)
+* [ ] Email verification (instant link)
+* [ ] No long forms asking for company info
+* [ ] "Already have account?" signin link
+Tech: Clerk authentication handles this.
+Status: COVERED. Clerk does all the work.
+________________
+
+
+PHASE 3: ONBOARDING (2 Pages) ✓
+PAGE 1: Company + Work Types
+* [ ] Company name input
+* [ ] Employee count input
+* [ ] Work type checkboxes (4 options):
+   * [ ] Electrical Work
+   * [ ] Work at Heights
+   * [ ] Lockout / Tagout (LOTO)
+   * [ ] Equipment Installation
+* [ ] "Next" button
+* [ ] Progress indicator (Page 1 of 2)
+PAGE 2: Contact & Address
+* [ ] Street address input
+* [ ] City input
+* [ ] State/Province dropdown
+* [ ] Postal code input
+* [ ] Contact name input
+* [ ] Contact email input
+* [ ] Contact phone input
+* [ ] Website input (optional)
+* [ ] "Start My Compliance Profile" button
+* [ ] Progress indicator (Page 2 of 2)
+Status: COVERED. Straightforward form.
+________________
+
+
+PHASE 4: QUESTIONNAIRE + DOCUMENTS ✓
+Core Questions (All Vendors Answer)
+* [ ] EHS program (yes/no)
+   * [ ] IF YES → Upload EHS Policy (doc)
+* [ ] Dedicated EHS resources (yes/no)
+   * [ ] IF YES → Describe resources (text)
+* [ ] Incident/accident process (yes/no)
+* [ ] Liability insurance (yes/no)
+   * [ ] IF YES → Coverage type (dropdown)
+   * [ ] IF YES → Expiry date (date picker)
+   * [ ] IF YES → Amount (number)
+   * [ ] IF YES → Upload certificate (doc)
+Safety Metrics (All Vendors)
+* [ ] Peak employees per year (number)
+* [ ] Total hours worked (number)
+* [ ] On-the-job fatalities (number)
+* [ ] Lost days - incidents (number)
+* [ ] Lost days - accidents (number)
+* [ ] Medical treatment cases (number)
+* [ ] First aid cases (number)
+* [ ] Near misses (number)
+Relationships (All Vendors)
+* [ ] Use subcontractors? (yes/no)
+   * [ ] IF YES → Upload subcontractor list (doc)
+* [ ] Are you a subcontractor? (yes/no)
+   * [ ] IF YES → Primary contractor name (text)
+Work-Type Specific Questions
+If Electrical Work selected:
+* [ ] Electrical safety program (yes/no)
+   * [ ] IF YES → Upload policy (doc)
+* [ ] Employee training (yes/no)
+   * [ ] IF YES → Upload training content (doc)
+* [ ] Equipment available (yes/no)
+   * [ ] IF YES → Checkboxes for: PPE, testing equipment, tools
+   * [ ] IF YES → Upload equipment list (doc)
+If Work at Heights selected:
+* [ ] Heights safety program (yes/no)
+   * [ ] IF YES → Upload policy (doc)
+* [ ] Fall protection equipment (yes/no)
+   * [ ] IF YES → List equipment (text)
+* [ ] Worker training (yes/no)
+If LOTO selected:
+* [ ] LOTO program (yes/no)
+   * [ ] IF YES → Upload procedure (doc)
+* [ ] Employee training (yes/no)
+   * [ ] IF YES → Upload training records (doc)
+* [ ] Lockout devices available (yes/no)
+If Equipment Installation selected:
+* [ ] Installation procedures (yes/no)
+   * [ ] IF YES → Upload procedures (doc)
+* [ ] Installer training (yes/no)
+   * [ ] IF YES → Upload training (doc)
+Questionnaire UI Features
+* [ ] Progress bar (% complete, always visible)
+* [ ] Section breaks (Core Safety, Insurance, Metrics, Relationships, Work-Type)
+* [ ] Smart branching (only show relevant questions)
+* [ ] Help text on questions (explain why we ask)
+* [ ] Document upload with drag-drop
+* [ ] Auto-save (continuous, no button)
+* [ ] Back button (can go back and edit)
+* [ ] "Next" button
+* [ ] Cancel/Save & Exit option
+Status: COVERED. Core questions + work-type logic clear.
+________________
+
+
+PHASE 5: DASHBOARD & COMPLIANCE SCORE ✓
+Dashboard Elements
+* [ ] Overall compliance score (%) with visual bar
+* [ ] Section breakdown:
+   * [ ] Core Safety (X/X)
+   * [ ] Insurance (X/X)
+   * [ ] Employees & Metrics (X/X)
+   * [ ] Relationships (X/X)
+   * [ ] Work-Type specific (X/X) - varies by selection
+* [ ] Color coding: ✓ = complete, ⚠ = action needed
+* [ ] "Missing Items" list with [Fix this] buttons
+* [ ] Action buttons:
+   * [ ] [Review Questionnaire]
+   * [ ] [Update Documents]
+   * [ ] [Export for Customer]
+   * [ ] [Add More Customers]
+Status Indicators
+* [ ] Green = section complete
+* [ ] Yellow = section needs attention
+* [ ] Clear visual hierarchy (big number = compliance %)
+* [ ] No confusing jargon
+* [ ] Mobile-friendly layout
+Status: COVERED. Simple dashboard design.
+________________
+
+
+PHASE 6: EXPORT (1 CLICK) ✓
+Export Flow
+* [ ] [Export for Customer] button on dashboard
+* [ ] Modal to select customer:
+   * [ ] Dropdown OR quick-select buttons
+   * [ ] Option to add new customer
+* [ ] Auto-generate PDF
+* [ ] Download button appears
+* [ ] [View in Browser] option
+* [ ] Success message
+Export PDF Content
+* [ ] Cover page:
+   * [ ] Vendor company name
+   * [ ] Generation date
+   * [ ] Compliance score (%)
+* [ ] Page 1:
+   * [ ] Executive summary
+   * [ ] Company info
+   * [ ] Contact person
+   * [ ] Work types included
+* [ ] Pages 2+:
+   * [ ] Questionnaire answers (by section)
+   * [ ] Document references
+* [ ] Final page:
+   * [ ] "Export generated on [date]"
+   * [ ] "Valid until [date]"
+   * [ ] "Compliance verified"
+Request Additional Questions Feature ✓
+* [ ] [Request Additional Questions from Customer] button
+* [ ] Email template appears with:
+   * [ ] TO: field (vendor enters email)
+   * [ ] Subject line (pre-filled)
+   * [ ] Body message (professional, pre-written)
+* [ ] [Copy Email] button
+* [ ] [Send Email] button (or manual send)
+What happens after:
+* [ ] Vendor sends email to customer
+* [ ] Customer replies with their questions/link
+* [ ] Vendor fills out THEIR system (not ours)
+* [ ] Vendor submits to customer
+* [ ] We don't need to do anything more
+Status: COVERED. Export + request feature clear.
+________________
+
+
+PHASE 7: REPEAT & MAINTAIN ✓
+Repeat Export (New Customer)
+* [ ] Dashboard shows "MY CUSTOMERS" list
+* [ ] [Add New Customer] button
+* [ ] Customer modal to select/add
+* [ ] Second export uses same answers (auto-fill)
+* [ ] Export in <5 minutes
+Customer List Management
+* [ ] Show list of customers exported to
+* [ ] Show last export date for each
+* [ ] [Re-export] button for each customer
+* [ ] [Add New Customer] button
+Maintenance Alerts (Nice to have, not MVP)
+* [ ] Email notification if docs expire
+* [ ] In-app alert if questionnaire data is old
+* [ ] "Annual refresh recommended" message
+Status: COVERED at basic level. Alerts can be Phase 2.
+________________
+
+
+DATA STORAGE & SECURITY ✓
+Database (Supabase)
+* [ ] Store vendor profile (name, address, contact)
+* [ ] Store questionnaire answers
+* [ ] Store document references (links to uploaded files)
+* [ ] Store customer export history
+* [ ] Store work-type selections
+File Storage (Supabase Storage)
+* [ ] Insurance certificates
+* [ ] EHS policies
+* [ ] Training records
+* [ ] Equipment lists
+* [ ] Subcontractor lists
+* [ ] Generated PDFs
+Security
+* [ ] Only vendor can see their own data
+* [ ] No data shared between vendors
+* [ ] HTTPS for all connections
+* [ ] Passwords encrypted (Clerk handles)
+Status: COVERED. Supabase handles this.
+________________
+
+
+WHAT WE'RE NOT BUILDING (MVP)
+These are Phase 2+:
+* ✗ Team accounts (multiple people at one vendor)
+* ✗ API integrations (auto-sync with customer portals)
+* ✗ Compliance tracking (which customer asked for what)
+* ✗ Analytics/reporting (vendor dashboards)
+* ✗ Audit trails (who changed what, when)
+* ✗ Custom questionnaire builder (for advanced customers)
+* ✗ Auto-submit to platforms (Veriforce, etc.)
+* ✗ Mobile app (web first)
+* ✗ Multi-language support
+* ✗ Advanced notifications (Slack, SMS)
+These are nice-to-have. Don't build them yet.
+________________
+
+
+UNKNOWN QUESTIONS (VENDOR HANDLES) ✓
+If customer asks for additional compliance questions:
+1. Vendor gets email template from us
+2. Vendor sends to customer asking for questions
+3. Customer sends them a link/questionnaire
+4. Vendor fills it out in CUSTOMER'S system (not ours)
+5. Vendor submits to customer
+We do NOT handle:
+* ✗ Building questionnaires per customer
+* ✗ Managing 250+ possible questions
+* ✗ Tracking which customer asked what
+We ONLY handle:
+* ✓ 30 core questions
+* ✓ Export with core answers
+* ✓ Email template to ask for more
+Status: COVERED. Clear boundary.
+________________
+
+
+SUMMARY: WHAT MVP COVERS 100%
+✅ Signup ✅ Onboarding (2 pages, 2 min) ✅ 30 core questions + 4 work-types ✅ Document uploads ✅ Dashboard with compliance score ✅ Professional PDF export (1 click) ✅ Email template to request additional questions ✅ Customer management (add, track, re-export) ✅ Repeat exports (<5 min) ✅ Data storage & security
+________________
+
+
+WHAT VENDOR HANDLES 100%
+✅ Additional customer-specific questions (they fill in customer's system) ✅ Submitting documents to customers ✅ Following up with customers
+________________
+
+
+ROBUSTNESS CHECK
+Can this scale?
+✅ 1 vendor, 1 customer: 30 min total ✅ 1 vendor, 3 customers: 30 min + 5 min + 5 min = 40 min total ✅ 1 vendor, 10 customers: 30 min + (9 × 5 min) = 75 min total ✅ Multiple vendors: Each has their own profile, same flow
+Does it handle different requirements?
+✅ Coke asks for 10 extra questions: Vendor emails template, fills their system ✅ Amazon asks for 20 extra questions: Same process ✅ Home Depot asks for different work-types: Already selected in onboarding ✅ Each customer gets customized export with their work-types only
+Is it simple & smooth?
+✅ Vendor feels like they got an upgrade ✅ No overwhelming forms ✅ No confusion about what's missing ✅ No waiting ✅ No multi-step wizards
+________________
+
+
+READY FOR WIREFRAMES?
+Everything above is what we need to design.
+Next: Create wireframes for:
+1. Signup
+2. Onboarding (2 pages)
+3. Questionnaire (sample page)
+4. Dashboard
+5. Export
+6. Request Questions email
+Let's go.

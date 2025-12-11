@@ -1,0 +1,571 @@
+{
+  "slug": "plumbing",
+  "clientId": "00000000-0000-0000-0000-000000000002",
+  "enabled": true,
+  "version": "1.0.0",
+  "businessInfo": {
+    "businessName": "AQUAPRO SOLUTIONS",
+    "operatingName": "AquaPro Solutions",
+    "legalName": "AquaPro Solutions LLC",
+    "industry": "Residential & Commercial Plumbing",
+    "yearsInBusiness": "20+ years",
+    "tagline": "YOUR WATER, OUR PRIORITY",
+    "contact": {
+      "primaryPhone": "(678) 788-7281",
+      "emailDisplay": "info@aquaprosolutions.com",
+      "emailRouting": "support@cherysolutions.com",
+      "businessAddress": "1234 Peachtree Industrial Blvd, Atlanta, GA 30341",
+      "serviceHours": "24/7 Emergency Service Available"
+    }
+  },
+  "hero": {
+    "eyebrow": "24/7 EMERGENCY PLUMBING",
+    "mainHeadline": "Emergency Plumber in 60 Minutes or Less",
+    "subheadline": "Licensed & Insured • Same-Day Repairs • 100% Satisfaction Guaranteed",
+    "backgroundImage": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1920&q=80",
+    "primaryCTA": {
+      "text": "GET FREE QUOTE",
+      "action": "form",
+      "value": "#contact-form",
+      "style": "primary"
+    },
+    "secondaryCTA": {
+      "text": "CALL (678) 788-7281",
+      "action": "phone",
+      "value": "tel:+16787887281",
+      "style": "secondary"
+    }
+  },
+  "trustBadges": [
+    {
+      "icon": "⏱️",
+      "text": "60-Minute Response Time",
+      "order": 1
+    },
+    {
+      "icon": "🛡️",
+      "text": "Licensed & Insured",
+      "order": 2
+    },
+    {
+      "icon": "⭐",
+      "text": "20+ Years Experience",
+      "order": 3
+    },
+    {
+      "icon": "✅",
+      "text": "Same-Day Service",
+      "order": 4
+    }
+  ],
+  "about": {
+    "eyebrow": "ABOUT AQUAPRO SOLUTIONS",
+    "heading": "Your Water, Our Priority Since 2005",
+    "description": "For over 20 years, AquaPro Solutions has been Atlanta's trusted name in emergency plumbing. From midnight pipe bursts to routine maintenance, our licensed plumbers respond fast and fix it right the first time.",
+    "paragraphs": [
+      "For over 20 years, AquaPro Solutions has been Atlanta's trusted name in emergency plumbing. From midnight pipe bursts to routine maintenance, our licensed plumbers respond fast and fix it right the first time.",
+      "We're not just plumbers—we're your neighbors. Family-owned and locally operated, we treat every home like our own, delivering honest service at fair prices."
+    ],
+    "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80",
+    "features": [
+      "Licensed & Insured",
+      "Background Checked",
+      "Upfront Pricing",
+      "90-Day Warranty"
+    ],
+    "yearsBadge": {
+      "value": "20+",
+      "label": "Years Serving Atlanta"
+    },
+    "ctaText": "LEARN MORE ABOUT US"
+  },
+  "services": [
+    {
+      "title": "Emergency Repairs",
+      "icon": "zap",
+      "description": "Burst pipes, water leaks, clogged drains? We respond in 60 minutes or less.",
+      "order": 1,
+      "featured": true
+    },
+    {
+      "title": "Drain Cleaning",
+      "icon": "droplet",
+      "description": "Professional drain cleaning and hydro jetting to clear stubborn clogs fast.",
+      "order": 2,
+      "featured": true
+    },
+    {
+      "title": "Water Heater Service",
+      "icon": "flame",
+      "description": "Installation, repair, and maintenance for all water heater brands and types.",
+      "order": 3,
+      "featured": true
+    },
+    {
+      "title": "Sewer Line Services",
+      "icon": "droplet",
+      "description": "Sewer line inspection, repair, and replacement. Camera inspection available.",
+      "order": 4
+    },
+    {
+      "title": "Leak Detection & Repair",
+      "icon": "droplet",
+      "description": "Find hidden leaks fast. Advanced leak detection technology saves you money.",
+      "order": 5
+    },
+    {
+      "title": "Toilet & Faucet Repair",
+      "icon": "droplet",
+      "description": "Running toilets, dripping faucets, and fixture replacement done right.",
+      "order": 6
+    },
+    {
+      "title": "Garbage Disposal Service",
+      "icon": "recycle",
+      "description": "Disposal repair and installation. Fix grinding, leaking, or jammed units.",
+      "order": 7
+    },
+    {
+      "title": "Plumbing Maintenance Plans",
+      "icon": "clipboard-check",
+      "description": "Prevent emergencies with annual plumbing inspections and maintenance.",
+      "order": 8
+    }
+  ],
+  "process": {
+    "heading": "How We Get You Back to Comfort Fast",
+    "subheading": "Our proven emergency response process",
+    "steps": [
+      {
+        "icon": "phone",
+        "title": "Call or Text Us",
+        "description": "Reach us 24/7 for immediate help",
+        "order": 1
+      },
+      {
+        "icon": "clock",
+        "title": "60-Minute Response",
+        "description": "Technician dispatched to you fast",
+        "order": 2
+      },
+      {
+        "icon": "wrench",
+        "title": "Expert Diagnosis",
+        "description": "We identify the problem quickly",
+        "order": 3
+      },
+      {
+        "icon": "tools",
+        "title": "Fast Repair",
+        "description": "Most repairs done same visit",
+        "order": 4
+      },
+      {
+        "icon": "clipboard-check",
+        "title": "Satisfaction Guaranteed",
+        "description": "You pay only when satisfied",
+        "order": 5
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "How fast can you respond to a plumbing emergency?",
+      "answer": "We guarantee a 60-minute response time for all emergency calls in the Atlanta metro area. Our plumbers are on-call 24/7, including weekends and holidays. When pipes burst or drains clog, we're already on our way.",
+      "order": 1
+    },
+    {
+      "question": "Do you offer financing for major plumbing repairs?",
+      "answer": "Yes. We offer flexible financing options with approved credit for water heater replacements, re-piping, and major repairs. Ask about our current 0% APR financing promotions. We believe everyone deserves reliable plumbing, regardless of budget.",
+      "order": 2
+    },
+    {
+      "question": "Are your plumbers licensed and background-checked?",
+      "answer": "Absolutely. All AquaPro Solutions plumbers are state-licensed, insured, and undergo rigorous background checks. We also require ongoing training to stay current on the latest plumbing technology and codes. You can trust who enters your home.",
+      "order": 3
+    },
+    {
+      "question": "What areas do you service in metro Atlanta?",
+      "answer": "We serve all of metro Atlanta including Fulton, DeKalb, Cobb, Gwinnett, and surrounding counties. If you're in the Atlanta area and need plumbing help, we can reach you within 60 minutes for emergencies.",
+      "order": 4
+    },
+    {
+      "question": "Do you provide warranties on repairs and installations?",
+      "answer": "Yes. All repairs come with a 90-day labor warranty. Water heater installations and major plumbing work include manufacturer warranties plus our workmanship guarantee. We stand behind every job we complete.",
+      "order": 5
+    }
+  ],
+  "socialMedia": {
+    "heading": "See Real Work, Real Results",
+    "subheading": "Before/after projects, plumbing tips, and happy customers. Join 5,000+ followers!",
+    "links": [
+      {
+        "platform": "facebook",
+        "url": "https://facebook.com/aquaprosolutions",
+        "label": "Facebook"
+      },
+      {
+        "platform": "instagram",
+        "url": "https://instagram.com/aquaprosolutions",
+        "label": "Instagram"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400&q=80",
+      "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=400&q=80",
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&q=80"
+    ]
+  },
+  "ctaBanner": {
+    "heading": "Plumbing Emergency?",
+    "subheading": "We respond in 60 minutes. Call now for immediate help.",
+    "primaryCTA": {
+      "text": "CALL (678) 788-7281"
+    },
+    "secondaryCTA": {
+      "text": "GET FREE QUOTE"
+    }
+  },
+  "serviceAreas": {
+    "heading": "Serving All of Metro Atlanta",
+    "cities": [
+      "Midtown Atlanta",
+      "Buckhead",
+      "Virginia Highland",
+      "Decatur",
+      "Sandy Springs",
+      "Marietta",
+      "Roswell",
+      "Alpharetta",
+      "Dunwoody",
+      "Brookhaven",
+      "Chamblee",
+      "Smyrna",
+      "East Point",
+      "College Park",
+      "Tucker",
+      "Lawrenceville"
+    ],
+    "counties": [
+      "Fulton County",
+      "DeKalb County",
+      "Cobb County",
+      "Gwinnett County",
+      "Clayton County"
+    ]
+  },
+  "businessHours": {
+    "Monday": "24/7 Emergency Service",
+    "Tuesday": "24/7 Emergency Service",
+    "Wednesday": "24/7 Emergency Service",
+    "Thursday": "24/7 Emergency Service",
+    "Friday": "24/7 Emergency Service",
+    "Saturday": "24/7 Emergency Service",
+    "Sunday": "24/7 Emergency Service",
+    "regularHours": {
+      "weekday": "Monday-Friday: 7:00 AM - 7:00 PM",
+      "saturday": "Saturday: 8:00 AM - 5:00 PM",
+      "sunday": "Sunday: Emergency calls only"
+    }
+  },
+  "ctaCopy": {
+    "primaryCTAs": [
+      "GET A FREE QUOTE",
+      "Call Now: (678) 788-7281",
+      "Schedule Service Today",
+      "Request Free Quote",
+      "Text Us for Faster Response"
+    ],
+    "emergencyBanner": "🔴 PLUMBING EMERGENCY? Call (678) 788-7281 - We Respond in 60 Minutes!",
+    "footerCTA": "Don't wait for your plumbing to fail. Call Atlanta's fastest response team now."
+  },
+  "sms": {
+    "autoResponse": "Thanks for texting AquaPro Solutions powered by CherySolutions. To get a quote please visit https://nevermisslead.com/plumbing",
+    "enabled": true
+  },
+  "socialProof": {
+    "eyebrow": "CUSTOMER REVIEWS",
+    "heading": "What Atlanta Homeowners Say",
+    "subheading": "4.9/5 from 650+ Reviews",
+    "stats": {
+      "rating": "4.9/5",
+      "totalReviews": "650+ Five-Star Reviews",
+      "awards": [
+        "Best Plumbing Service 2024",
+        "BBB A+ Rated"
+      ],
+      "certifications": [
+        "Master Plumber Licensed",
+        "Fully Insured",
+        "Background Checked"
+      ]
+    },
+    "testimonials": [
+      {
+        "quote": "Pipe burst at 2 AM. AquaPro was here in 40 minutes and fixed it fast. Saved us from major water damage. These guys are the real deal!",
+        "author": "David W.",
+        "location": "Buckhead",
+        "rating": 5,
+        "order": 1
+      },
+      {
+        "quote": "Honest pricing, professional service. They replaced our water heater and saved us $600 compared to other quotes. Highly recommend!",
+        "author": "Lisa P.",
+        "location": "Decatur",
+        "rating": 5,
+        "order": 2
+      },
+      {
+        "quote": "Our go-to plumbers for everything. Always on time, always professional. The 60-minute guarantee is real!",
+        "author": "Robert H.",
+        "location": "Marietta",
+        "rating": 5,
+        "order": 3
+      }
+    ]
+  },
+  "valuePropositions": {
+    "heading": "The AquaPro Solutions Difference",
+    "differentiators": [
+      "✓ 60-Minute Emergency Response - We mean it",
+      "✓ Upfront Pricing - No hidden fees or surprise charges",
+      "✓ Licensed Master Plumbers - Experts you can trust",
+      "✓ Same-Day Service - Most repairs completed first visit",
+      "✓ 90-Day Repair Warranty - All work guaranteed",
+      "✓ 24/7 Availability - Nights, weekends, holidays",
+      "✓ Family-Owned & Local - We live here too",
+      "✓ Flexible Financing - Affordable payment options"
+    ]
+  },
+  "specialOffers": [
+    {
+      "icon": "🎁",
+      "title": "NEW CUSTOMER SPECIAL",
+      "description": "$59 Plumbing Diagnostic (Regular $129 - Save $70)",
+      "enabled": true,
+      "order": 1
+    },
+    {
+      "icon": "💧",
+      "title": "DRAIN CLEANING SPECIAL",
+      "description": "$99 Complete Drain Cleaning - All Main Lines Included",
+      "enabled": true,
+      "order": 2
+    },
+    {
+      "icon": "🔧",
+      "title": "WATER HEATER SPECIAL",
+      "description": "$200 Off New Water Heater Installation - Limited Time Offer",
+      "enabled": true,
+      "order": 3
+    }
+  ],
+  "finalCTA": {
+    "heading": "Don't Wait for Your Plumbing to Fail",
+    "subheading": "Call Atlanta's fastest plumbing response team now",
+    "description": "Whether it's an emergency burst pipe or preventive maintenance, AquaPro Solutions is ready to help. With 20+ years serving Atlanta, we've seen it all—and fixed it all. Our 60-minute emergency response and same-day service mean you're never left dealing with water damage alone.",
+    "primaryCTA": {
+      "text": "Call (678) 788-7281 Now",
+      "action": "phone",
+      "value": "tel:+16787887281",
+      "style": "inverse"
+    },
+    "secondaryCTA": {
+      "text": "Schedule Online",
+      "action": "form",
+      "value": "#contact-form",
+      "style": "secondary"
+    },
+    "bannerImage": "/assets/plumbing/aquapro-service-icon.jpg"
+  },
+  "footer": {
+    "tagline": "Atlanta's Most Trusted Plumbing Service Since 2005",
+    "quickLinks": [
+      {
+        "text": "Home",
+        "href": "/",
+        "order": 1
+      },
+      {
+        "text": "Emergency Service",
+        "href": "#emergency",
+        "order": 2
+      },
+      {
+        "text": "Services",
+        "href": "#services",
+        "order": 3
+      },
+      {
+        "text": "About Us",
+        "href": "#about",
+        "order": 4
+      },
+      {
+        "text": "Service Areas",
+        "href": "#service-areas",
+        "order": 5
+      },
+      {
+        "text": "Reviews",
+        "href": "#reviews",
+        "order": 6
+      },
+      {
+        "text": "Contact",
+        "href": "#contact",
+        "order": 7
+      },
+      {
+        "text": "Financing",
+        "href": "#financing",
+        "order": 8
+      }
+    ],
+    "servicesLinks": [
+      {
+        "text": "Emergency Pipe Repair",
+        "href": "#services",
+        "order": 1
+      },
+      {
+        "text": "Drain Cleaning",
+        "href": "#services",
+        "order": 2
+      },
+      {
+        "text": "Water Heater Service",
+        "href": "#services",
+        "order": 3
+      },
+      {
+        "text": "Sewer Line Repair",
+        "href": "#services",
+        "order": 4
+      },
+      {
+        "text": "Leak Detection",
+        "href": "#services",
+        "order": 5
+      },
+      {
+        "text": "Toilet & Faucet Repair",
+        "href": "#services",
+        "order": 6
+      },
+      {
+        "text": "Garbage Disposal",
+        "href": "#services",
+        "order": 7
+      },
+      {
+        "text": "Maintenance Plans",
+        "href": "#services",
+        "order": 8
+      }
+    ],
+    "contactInfo": {
+      "businessName": "AquaPro Solutions",
+      "address": "1234 Peachtree Industrial Blvd, Atlanta, GA 30341",
+      "phone": "(678) 788-7281",
+      "email": "info@aquaprosolutions.com",
+      "credentials": [
+        "Licensed & Insured",
+        "Master Plumber",
+        "GA License #PL12345",
+        "20+ Years Experience"
+      ]
+    },
+    "legalLinks": [
+      {
+        "text": "Privacy Policy",
+        "href": "/privacy",
+        "order": 1
+      },
+      {
+        "text": "Terms of Service",
+        "href": "/terms",
+        "order": 2
+      },
+      {
+        "text": "Accessibility",
+        "href": "/accessibility",
+        "order": 3
+      }
+    ],
+    "copyright": "© 2025 AquaPro Solutions. All rights reserved."
+  },
+  "seo": {
+    "pageTitle": "Emergency Plumber Atlanta | AquaPro Solutions",
+    "metaDescription": "Atlanta's fastest emergency plumbing service with 60-minute response. 24/7 pipe repair, drain cleaning, water heater service. Licensed, insured & trusted.",
+    "keywords": [
+      "Emergency Plumber Atlanta",
+      "24/7 plumbing repair Atlanta",
+      "Fast plumbing service",
+      "Burst pipe repair",
+      "Atlanta plumbing emergency",
+      "60-minute plumber response",
+      "Plumbing contractor Atlanta",
+      "Drain cleaning Atlanta",
+      "Water heater repair Atlanta",
+      "Licensed plumber Atlanta"
+    ]
+  },
+  "branding": {
+    "colors": {
+      "primary": "#0066CC",
+      "secondary": "#003D7A",
+      "accent": "#00A8E8",
+      "neutral": {
+        "dark": "#2C3E50",
+        "light": "#F8F9FA",
+        "white": "#FFFFFF"
+      }
+    },
+    "logo": {
+      "text": "AQUAPRO SOLUTIONS",
+      "tagline": "YOUR WATER, OUR PRIORITY",
+      "image": {
+        "src": "/assets/plumbing/aquapro-logo.png",
+        "alt": "AquaPro Solutions logo",
+        "priority": true
+      }
+    },
+    "typography": {
+      "headingFont": "Roboto Bold",
+      "bodyFont": "Roboto"
+    }
+  },
+  "integrations": {
+    "google": {
+      "businessProfile": {
+        "name": "AquaPro Solutions",
+        "category": "Plumbing Contractor"
+      },
+      "reviewsWidget": {
+        "enabled": true,
+        "minRating": 4
+      }
+    },
+    "twilio": {
+      "trackingNumber": "+16787887281",
+      "forwardToNumber": "+16787887281",
+      "smsEnabled": true,
+      "voiceEnabled": true,
+      "recordCalls": true
+    }
+  },
+  "features": {
+    "showSpecialOffers": true,
+    "enableLiveChat": false,
+    "enableOnlineBooking": true,
+    "showBlog": false,
+    "showGallery": false,
+    "hideFinalCTA": true,
+    "hideFooter": true
+  },
+  "servicesSection": {
+    "heading": "Emergency & Routine|Plumbing Services",
+    "description": "From burst pipes to drain cleaning, we keep Atlanta homes flowing smoothly 24/7"
+  }
+}

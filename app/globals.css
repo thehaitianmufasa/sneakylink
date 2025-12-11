@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fontsource/inter/300.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/inter/800.css';
+@import '@fontsource/inter/900.css';
+
+@layer base {
+  :root {
+    --primary: #234654;
+    --secondary: #F5A05C;
+    --white: #FFFFFF;
+    --light-gray: #F3F4F6;
+    --dark-gray: #1F2937;
+    --text: #374151;
+
+    /* Dynamic brand colors (set by ColorProvider) */
+    --brand-primary: var(--primary);
+    --brand-secondary: var(--secondary);
+    --brand-accent: var(--secondary);
+  }
+
+  * {
+    @apply border-gray-200;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  body {
+    @apply bg-white text-text font-sans;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    max-width: 100%;
+    overscroll-behavior-x: none;
+    touch-action: pan-y;
+  }
+
+  html {
+    overflow-x: hidden;
+    max-width: 100%;
+    overscroll-behavior-x: none;
+    touch-action: pan-y;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-dark-gray;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl lg:text-8xl;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  /* Hero section specific styles */
+  .hero-headline {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.03em !important;
+  }
+
+  .hero-subheading {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  .hero-headline .gradient-text {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  }
+}
+
+@layer components {
+  /* Premium gradient button styles */
+  .btn-primary-gradient {
+    @apply text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300;
+    background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-accent) 100%);
+  }
+
+  .btn-primary-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-primary {
+    @apply bg-secondary text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply bg-white text-primary border-2 border-primary font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:bg-primary hover:text-white;
+  }
+
+  .btn-white {
+    @apply bg-white text-gray-900 font-semibold px-8 py-4 rounded-lg transition-all duration-300;
+  }
+
+  .btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .section-container {
+    @apply max-w-container mx-auto px-4 md:px-8 py-section-mobile md:py-section;
+  }
+
+  .card {
+    @apply bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300 hover:border-secondary hover:shadow-lg;
+  }
+
+  /* Service card with lift animation */
+  .service-card {
+    @apply bg-white border border-gray-200 rounded-xl p-8 transition-all duration-300;
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--brand-primary);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Trust badge styles */
+  .trust-badge {
+    @apply bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300;
+  }
+
+  .trust-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Gradient trust badge (for Plumbing/HVAC) */
+  .trust-badge-gradient {
+    @apply rounded-xl p-8 transition-all duration-300;
+    background: linear-gradient(135deg,
+      rgba(var(--brand-primary-rgb), 0.1) 0%,
+      rgba(var(--brand-secondary-rgb), 0.1) 100%);
+  }
+
+  .trust-badge-gradient:hover {
+    background: linear-gradient(135deg,
+      rgba(var(--brand-primary-rgb), 0.15) 0%,
+      rgba(var(--brand-secondary-rgb), 0.15) 100%);
+    transform: translateY(-4px);
+  }
+
+  /* Testimonial card */
+  .testimonial-card {
+    @apply bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300;
+  }
+
+  .testimonial-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Hero overlay gradients */
+  .hero-overlay-orange {
+    background: linear-gradient(135deg, rgba(26, 43, 76, 0.85) 0%, rgba(26, 43, 76, 0.7) 100%);
+  }
+
+  .hero-overlay-blue {
+    background: linear-gradient(135deg, rgba(0, 61, 122, 0.85) 0%, rgba(0, 102, 204, 0.7) 100%);
+  }
+
+  .hero-overlay-red {
+    background: linear-gradient(135deg, rgba(211, 47, 47, 0.9) 0%, rgba(13, 71, 161, 0.85) 100%);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+}

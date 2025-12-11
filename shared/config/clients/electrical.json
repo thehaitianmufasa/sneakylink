@@ -1,0 +1,578 @@
+{
+  "slug": "electrical",
+  "clientId": "00000000-0000-0000-0000-000000000003",
+  "enabled": true,
+  "version": "1.0.0",
+  "businessInfo": {
+    "businessName": "Electro Pros",
+    "operatingName": "Electro Pros",
+    "legalName": "Electro Pros LLC",
+    "industry": "Electrical Services",
+    "yearsInBusiness": "15+ years",
+    "tagline": "Reliable Power Solutions",
+    "contact": {
+      "primaryPhone": "(678) 788-7281",
+      "emailDisplay": "info@nevermisslead.com",
+      "emailRouting": "jeff@cherysolutions.com",
+      "businessAddress": "1234 Peachtree Industrial Blvd, Atlanta, GA 30341",
+      "serviceHours": "24/7 Emergency Service Available"
+    }
+  },
+  "hero": {
+    "eyebrow": "24/7 EMERGENCY SERVICE",
+    "mainHeadline": "Emergency Electrician in 60 Minutes or Less",
+    "subheadline": "Licensed & Insured • Same-Day Service • 100% Satisfaction Guaranteed",
+    "description": "When power goes out, circuits trip, or electrical hazards appear, you need help NOW. Electro Pros responds within 60 minutes with licensed electricians ready to restore your safety and power fast. No waiting, no hassles—just expert service you can count on.",
+    "backgroundImage": "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&q=80",
+    "primaryCTA": {
+      "text": "GET FREE QUOTE",
+      "action": "form",
+      "value": "#contact-form",
+      "style": "primary"
+    },
+    "secondaryCTA": {
+      "text": "CALL (678) 788-7281",
+      "action": "phone",
+      "value": "tel:+16787887281",
+      "style": "secondary"
+    }
+  },
+  "trustBadges": [
+    {
+      "icon": "⚡",
+      "text": "60-Minute Response",
+      "order": 1
+    },
+    {
+      "icon": "🛡",
+      "text": "Licensed & Insured",
+      "order": 2
+    },
+    {
+      "icon": "⭐",
+      "text": "15+ Years Experience",
+      "order": 3
+    },
+    {
+      "icon": "✅",
+      "text": "Same-Day Service",
+      "order": 4
+    }
+  ],
+  "about": {
+    "eyebrow": "About Electro Pros",
+    "heading": "Atlanta's Most Trusted Electrical Team",
+    "title": "Atlanta's Most Trusted Electrical Team",
+    "description": "For over 15 years, Electro Pros has been Atlanta's go-to emergency electrical specialists. We built our reputation on speed, reliability, and safety—responding within 60 minutes when you need us most. Our licensed electricians handle everything from emergency repairs to smart home installations, always putting your safety first. Family-owned and locally operated, we treat every home like our own.",
+    "paragraphs": [
+      "For over 15 years, Electro Pros has been Atlanta's go-to emergency electrical specialists. We built our reputation on speed, reliability, and safety—responding within 60 minutes when you need us most.",
+      "Our licensed electricians handle everything from emergency repairs to smart home installations, always putting your safety first. Family-owned and locally operated, we treat every home like our own."
+    ],
+    "logo": "/assets/electrical/electro-pros-service-icon.jpg",
+    "image": "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&q=80",
+    "features": [
+      "Licensed & Insured",
+      "Background Checked",
+      "Upfront Pricing",
+      "90-Day Warranty"
+    ],
+    "yearsBadge": {
+      "value": "15+",
+      "label": "Years Serving Atlanta"
+    },
+    "ctaText": "Get Free Quote"
+  },
+  "services": [
+    {
+      "title": "Emergency Electrical Repair",
+      "icon": "zap",
+      "description": "Power outages, tripped breakers, electrical hazards? We respond in 60 minutes.",
+      "order": 1,
+      "featured": true
+    },
+    {
+      "title": "Electrical Panel Upgrades",
+      "icon": "zap",
+      "description": "Outdated panel? Upgrade to modern, safe electrical panels with more capacity.",
+      "order": 2,
+      "featured": true
+    },
+    {
+      "title": "Circuit Breaker Services",
+      "icon": "zap",
+      "description": "Tripping breakers, electrical overloads fixed fast. Keep your home powered safely.",
+      "order": 3
+    },
+    {
+      "title": "EV Charging Station Installation",
+      "icon": "zap",
+      "description": "Professional EV charger installation for Tesla, Rivian, and all electric vehicles.",
+      "order": 4
+    },
+    {
+      "title": "Solar Panel Installation",
+      "icon": "sun",
+      "description": "Go solar and save on energy bills. Professional solar installation and service.",
+      "order": 5
+    },
+    {
+      "title": "Smart Home Automation",
+      "icon": "home",
+      "description": "Smart lighting, thermostats, security systems installed by certified technicians.",
+      "order": 6
+    },
+    {
+      "title": "Lighting Installation & Repair",
+      "icon": "lightbulb",
+      "description": "Indoor, outdoor, and landscape lighting installation and repair service.",
+      "order": 7
+    },
+    {
+      "title": "Electrical Safety Inspections",
+      "icon": "shield",
+      "description": "Comprehensive electrical inspections to keep your home and family safe.",
+      "order": 8
+    }
+  ],
+  "process": {
+    "heading": "How We Get You Back to Comfort Fast",
+    "subheading": "Our proven emergency response process",
+    "steps": [
+      {
+        "icon": "phone",
+        "title": "Call or Text Us",
+        "description": "Reach us 24/7 for immediate help",
+        "order": 1
+      },
+      {
+        "icon": "clock",
+        "title": "60-Minute Response",
+        "description": "Technician dispatched to you fast",
+        "order": 2
+      },
+      {
+        "icon": "wrench",
+        "title": "Expert Diagnosis",
+        "description": "We identify the problem quickly",
+        "order": 3
+      },
+      {
+        "icon": "tools",
+        "title": "Fast Repair",
+        "description": "Most repairs done same visit",
+        "order": 4
+      },
+      {
+        "icon": "clipboard-check",
+        "title": "Satisfaction Guaranteed",
+        "description": "You pay only when satisfied",
+        "order": 5
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "How fast can you respond to an electrical emergency?",
+      "answer": "We guarantee a 60-minute response time for all emergency calls in the Atlanta metro area. Our electricians are on-call 24/7, including weekends and holidays. When your power fails or electrical hazards appear, we're already on our way.",
+      "order": 1
+    },
+    {
+      "question": "Do you offer financing for electrical panel upgrades?",
+      "answer": "Yes. We offer flexible financing options with approved credit for panel upgrades and major electrical work. Ask about our current 0% APR financing promotions. We believe everyone deserves safe, reliable electrical systems.",
+      "order": 2
+    },
+    {
+      "question": "Are your electricians certified and background-checked?",
+      "answer": "Absolutely. All Electro Pros electricians are licensed, insured, and undergo rigorous background checks. We also require ongoing training to stay current on the latest electrical codes and technology. You can trust who enters your home.",
+      "order": 3
+    },
+    {
+      "question": "What areas do you service in metro Atlanta?",
+      "answer": "We serve all of metro Atlanta including Fulton, DeKalb, Cobb, Gwinnett, and surrounding counties. If you're in the Atlanta area and need electrical help, we can reach you within 60 minutes for emergencies.",
+      "order": 4
+    },
+    {
+      "question": "Do you provide warranties on electrical work?",
+      "answer": "Yes. All repairs come with a 90-day labor warranty. New installations include manufacturer warranties and our lifetime service guarantee. We stand behind every job we complete.",
+      "order": 5
+    }
+  ],
+  "serviceAreas": {
+    "heading": "Serving All of Metro Atlanta",
+    "description": "Fast response across Fulton, DeKalb, Cobb, Gwinnett, and surrounding counties.",
+    "cities": [
+      "Midtown Atlanta",
+      "Buckhead",
+      "Virginia Highland",
+      "Decatur",
+      "Sandy Springs",
+      "Marietta",
+      "Roswell",
+      "Alpharetta",
+      "Dunwoody",
+      "Brookhaven",
+      "Chamblee",
+      "Smyrna",
+      "East Point",
+      "College Park",
+      "Tucker",
+      "Lawrenceville"
+    ],
+    "counties": [
+      "Fulton County",
+      "DeKalb County",
+      "Cobb County",
+      "Gwinnett County",
+      "Clayton County"
+    ]
+  },
+  "businessHours": {
+    "Monday": "24/7 Emergency Service",
+    "Tuesday": "24/7 Emergency Service",
+    "Wednesday": "24/7 Emergency Service",
+    "Thursday": "24/7 Emergency Service",
+    "Friday": "24/7 Emergency Service",
+    "Saturday": "24/7 Emergency Service",
+    "Sunday": "24/7 Emergency Service",
+    "regularHours": {
+      "weekday": "Monday-Friday: 7:00 AM - 7:00 PM",
+      "saturday": "Saturday: 8:00 AM - 5:00 PM",
+      "sunday": "Sunday: Emergency calls only"
+    }
+  },
+  "ctaCopy": {
+    "primaryCTAs": [
+      "GET A FREE QUOTE",
+      "Call Now: (678) 788-7281",
+      "Schedule Service Today",
+      "Request Free Quote",
+      "Text Us for Faster Response"
+    ],
+    "emergencyBanner": "🔴 ELECTRICAL EMERGENCY? Call (678) 788-7281 - We Respond in 60 Minutes!",
+    "footerCTA": "Don't wait for your electrical system to fail. Call Atlanta's fastest response team now."
+  },
+  "sms": {
+    "autoResponse": "Thanks for texting NeverMissLead powered by CherySolutions. To get a quote please visit https://nevermisslead.com",
+    "enabled": true
+  },
+  "socialProof": {
+    "eyebrow": "Customer Reviews",
+    "heading": "What Atlanta Homeowners Say",
+    "subheading": "4.9/5 from 500+ Reviews",
+    "stats": {
+      "rating": "4.9/5",
+      "totalReviews": "500+ Five-Star Reviews",
+      "awards": [
+        "Best Electrical Service 2024",
+        "BBB A+ Rated"
+      ],
+      "certifications": [
+        "Master Electrician Licensed",
+        "Fully Insured",
+        "Background Checked"
+      ]
+    },
+    "testimonials": [
+      {
+        "quote": "Power went out at 10 PM and my security system was down. They arrived in 40 minutes and had everything working perfectly. Outstanding emergency service!",
+        "author": "Sarah M.",
+        "location": "Buckhead",
+        "rating": 5,
+        "order": 1
+      },
+      {
+        "quote": "Finally found honest electricians in Atlanta. They upgraded my panel for $800 when another company quoted $2,200. Highly recommend!",
+        "author": "Marcus T.",
+        "location": "Decatur",
+        "rating": 5,
+        "order": 2
+      },
+      {
+        "quote": "Professional, fast, and safe. Our go-to for all electrical needs. The 60-minute emergency response is legit!",
+        "author": "Jennifer L.",
+        "location": "Marietta",
+        "rating": 5,
+        "order": 3
+      }
+    ]
+  },
+  "valuePropositions": {
+    "heading": "The NeverMissLead Difference",
+    "differentiators": [
+      "✓ 60-Minute Emergency Response - We mean it",
+      "✓ Upfront Pricing - No hidden fees or surprise charges",
+      "✓ NATE-Certified Technicians - Experts you can trust",
+      "✓ Same-Day Service - Most repairs completed first visit",
+      "✓ 90-Day Repair Warranty - All work guaranteed",
+      "✓ 24/7 Availability - Nights, weekends, holidays",
+      "✓ Family-Owned & Local - We live here too",
+      "✓ Flexible Financing - Affordable payment options"
+    ]
+  },
+  "specialOffers": [
+    {
+      "icon": "🎁",
+      "title": "NEW CUSTOMER SPECIAL",
+      "description": "$49 Electrical Safety Inspection (Regular $129 - Save $80)",
+      "enabled": true,
+      "order": 1
+    },
+    {
+      "icon": "⚡",
+      "title": "PANEL UPGRADE SPECIAL",
+      "description": "$200 Off Complete Electrical Panel Upgrade - Limited Time Offer",
+      "enabled": true,
+      "order": 2
+    },
+    {
+      "icon": "🔌",
+      "title": "EV CHARGER INSTALLATION",
+      "description": "10% Off EV Charging Station Installation - Mention this offer when booking",
+      "enabled": true,
+      "order": 3
+    }
+  ],
+  "finalCTA": {
+    "heading": "Don't Wait for Electrical Emergencies",
+    "subheading": "Call Atlanta's fastest electrical response team now",
+    "description": "Whether it's an emergency power outage or upgrading to smart home technology, Electro Pros is ready to help. With 15+ years serving Atlanta, we've handled it all—from simple repairs to complete electrical renovations. Our 60-minute emergency response and same-day service mean you're never left in the dark.",
+    "primaryCTA": {
+      "text": "Call (678) 788-7281 Now",
+      "action": "phone",
+      "value": "tel:+16787887281",
+      "style": "inverse"
+    },
+    "secondaryCTA": {
+      "text": "Schedule Online",
+      "action": "form",
+      "value": "#contact-form",
+      "style": "secondary"
+    },
+    "bannerImage": "/assets/electrical/electro-pros-service-icon.jpg"
+  },
+  "footer": {
+    "tagline": "Atlanta's Most Trusted Electrical Service Since 2009",
+    "quickLinks": [
+      {
+        "text": "Home",
+        "href": "/",
+        "order": 1
+      },
+      {
+        "text": "Emergency Service",
+        "href": "#emergency",
+        "order": 2
+      },
+      {
+        "text": "Services",
+        "href": "#services",
+        "order": 3
+      },
+      {
+        "text": "About Us",
+        "href": "#about",
+        "order": 4
+      },
+      {
+        "text": "Service Areas",
+        "href": "#service-areas",
+        "order": 5
+      },
+      {
+        "text": "Reviews",
+        "href": "#reviews",
+        "order": 6
+      },
+      {
+        "text": "Contact",
+        "href": "#contact",
+        "order": 7
+      },
+      {
+        "text": "Financing",
+        "href": "#financing",
+        "order": 8
+      }
+    ],
+    "servicesLinks": [
+      {
+        "text": "Emergency Electrical Repair",
+        "href": "#service-emergency-electrical-repair",
+        "order": 1
+      },
+      {
+        "text": "Panel Upgrades",
+        "href": "#service-electrical-panel-upgrades",
+        "order": 2
+      },
+      {
+        "text": "Circuit Breaker Services",
+        "href": "#service-circuit-breaker-services",
+        "order": 3
+      },
+      {
+        "text": "EV Charging Installation",
+        "href": "#service-ev-charging-station-installation",
+        "order": 4
+      },
+      {
+        "text": "Solar Panel Installation",
+        "href": "#service-solar-panel-installation",
+        "order": 5
+      },
+      {
+        "text": "Whole Home Surge Protection",
+        "href": "#service-whole-home-surge-protection",
+        "order": 6
+      },
+      {
+        "text": "Smart Home Systems",
+        "href": "#service-smart-home-systems",
+        "order": 7
+      },
+      {
+        "text": "Electrical Safety Inspections",
+        "href": "#service-electrical-safety-inspections",
+        "order": 8
+      }
+    ],
+    "contactInfo": {
+      "businessName": "Electro Pros",
+      "address": "1234 Peachtree Industrial Blvd, Atlanta, GA 30341",
+      "phone": "(678) 788-7281",
+      "email": "info@electropros.com",
+      "credentials": [
+        "Licensed & Insured",
+        "Master Electrician",
+        "GA License #XXXXXXX",
+        "OSHA Certified"
+      ]
+    },
+    "legalLinks": [
+      {
+        "text": "Privacy Policy",
+        "href": "/privacy",
+        "order": 1
+      },
+      {
+        "text": "Terms of Service",
+        "href": "/terms",
+        "order": 2
+      },
+      {
+        "text": "Accessibility",
+        "href": "/accessibility",
+        "order": 3
+      }
+    ],
+    "copyright": "© 2025 Electro Pros. All rights reserved."
+  },
+  "seo": {
+    "pageTitle": "Emergency Electrician Atlanta | NeverMissLead",
+    "metaDescription": "Atlanta fast emergency electrical service with 60-minute response. 24/7 electrical repair, panel upgrades, EV charging. Licensed, insured & trusted.",
+    "keywords": [
+      "Emergency Electrician Atlanta",
+      "24/7 electrical repair Atlanta",
+      "Fast electrical service",
+      "Panel upgrade Atlanta",
+      "Atlanta electrical emergency",
+      "60-minute electrician response",
+      "Electrical contractor Atlanta",
+      "EV charger installation Atlanta",
+      "Smart home Atlanta",
+      "Licensed electrician Atlanta"
+    ]
+  },
+  "branding": {
+    "colors": {
+      "primary": "#F89C1C",
+      "secondary": "#1A2B4C",
+      "accent": "#FF8C00",
+      "neutral": {
+        "dark": "#2C3E50",
+        "light": "#F5F5F5",
+        "white": "#FFFFFF"
+      }
+    },
+    "logo": {
+      "text": "ELECTRO PROS",
+      "tagline": "RELIABLE POWER SOLUTIONS",
+      "image": {
+        "src": "/assets/electrical/electro-pros-logo.png",
+        "alt": "Electro Pros logo",
+        "priority": true
+      }
+    },
+    "typography": {
+      "headingFont": "Roboto Bold",
+      "bodyFont": "Roboto"
+    }
+  },
+  "integrations": {
+    "google": {
+      "businessProfile": {
+        "name": "NeverMissLead HVAC",
+        "category": "HVAC Contractor"
+      },
+      "reviewsWidget": {
+        "enabled": true,
+        "minRating": 4
+      }
+    },
+    "twilio": {
+      "trackingNumber": "+16787887281",
+      "forwardToNumber": "+16787887281",
+      "smsEnabled": true,
+      "voiceEnabled": true,
+      "recordCalls": true
+    }
+  },
+  "features": {
+    "showSpecialOffers": true,
+    "enableLiveChat": false,
+    "enableOnlineBooking": true,
+    "showBlog": false,
+    "showGallery": false,
+    "hideFinalCTA": true,
+    "hideFooter": true
+  },
+  "servicesSection": {
+    "heading": "Emergency & Routine|Electrical Services",
+    "description": "From midnight power outages to planned upgrades, we keep Atlanta safely powered year-round."
+  },
+  "socialMedia": {
+    "heading": "Follow Our Work on Social Media",
+    "subheading": "See real projects, helpful tips, and satisfied customers. Join our growing community!",
+    "links": [
+      {
+        "platform": "facebook",
+        "url": "https://facebook.com/electropros",
+        "label": "Facebook"
+      },
+      {
+        "platform": "instagram",
+        "url": "https://instagram.com/electropros",
+        "label": "Instagram"
+      },
+      {
+        "platform": "twitter",
+        "url": "https://twitter.com/electropros",
+        "label": "Twitter"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&q=80",
+      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&q=80"
+    ]
+  },
+  "ctaBanner": {
+    "heading": "Electrical Emergency?",
+    "subheading": "We respond in 60 minutes. Call now for immediate help.",
+    "primaryCTA": {
+      "text": "CALL (678) 788-7281"
+    },
+    "secondaryCTA": {
+      "text": "GET FREE QUOTE"
+    }
+  }
+}

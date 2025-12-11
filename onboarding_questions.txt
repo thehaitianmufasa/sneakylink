@@ -1,0 +1,610 @@
+FORM SETTINGS
+
+Form Title: Client Onboarding - Website Setup
+Form Description:
+Welcome! Please fill out this form so we can build your custom website. This should take about
+10-15 minutes. All fields marked with * are required.
+Once submitted, we'll begin building your site and have it live within 48-72 hours.
+Questions? Email: jeff@cherysolutions.com or call: 678-788-7281
+
+Settings to enable:
+●
+☑ Collect email addresses
+●
+☑ Limit to 1 response
+●
+☑ Send respondent a copy of their response
+SECTION 1: BUSINESS INFORMATION
+Section Title: Business Information Section Description: Tell us about your business
+Question 1:
+●
+Type: Short answer
+●
+Question: "Business Name" *
+●
+Required: Yes
+●
+Example: "Atlanta Emergency HVAC"
+Question 2:
+●
+Type: Short answer
+●
+Question: "Doing Business As (DBA) name (if different from legal name)"
+●
+Required: No
+Question 3:
+●
+Type: Multiple choice
+●
+Question: "What industry are you in?" *
+●
+Required: Yes
+●
+Options:
+○
+HVAC
+○
+Plumbing
+○
+Electrical
+○
+Roofing
+○
+Pool Service
+○
+Landscaping
+○
+Other
+Question 4:
+●
+Type: Short answer
+●
+Question: "If you selected 'Other'
+, please specify"
+●
+Required: No
+●
+Show only if: "What industry are you in?" = "Other"
+Question 5:
+●
+Type: Short answer
+●
+Question: "How many years have you been in business?"
+●
+Required: No
+●
+Example: "15 years"
+Question 6:
+●
+Type: Short answer
+●
+Question: "City and State" *
+●
+Required: Yes
+●
+Example: "Atlanta, GA"
+Question 7:
+●
+Type: Short answer
+●
+Question: "Primary Service Area (cities/counties you serve)" *
+●
+Required: Yes
+●
+Example: "Fulton County, DeKalb County, Cobb County"
+Question 8:
+●
+Type: Short answer
+●
+Question: "Owner/Contact Name" *
+●
+Required: Yes
+Question 9:
+●
+Type: Short answer
+●
+Question: "Primary Business Phone Number" *
+●
+Required: Yes
+●
+Validation: Regular expression matches "(555) 555-5555" format
+●
+Example: "(404) 555-0100"
+Question 10:
+●
+Type: Short answer
+●
+Question: "Business Email Address" *
+●
+Required: Yes
+●
+Validation: Email
+Question 11:
+●
+Type: Paragraph
+●
+Question: "Business Street Address (include city, state, zip)"
+●
+Required: No
+Question 12:
+●
+Type: Multiple choice
+●
+Question: "Do you already own a domain name?" *
+●
+Required: Yes
+●
+Options:
+○
+Yes, I own a domain (we'll help you point it to your new site)
+○
+No, I need to purchase one ($12/year, added to setup fee)
+Question 13:
+●
+Type: Short answer
+●
+Question: "If yes, what is your domain name?"
+●
+Required: No
+●
+Show only if: "Do you already own a domain name?" = "Yes, I own a domain"
+●
+Example: "atlantahvac.com"
+SECTION 2: BRANDING & DESIGN
+Section Title: Branding & Design Section Description: Help us match your brand
+Question 14:
+●
+Type: File upload
+●
+Question: "Upload Your Logo (PNG or SVG preferred)" *
+●
+Required: Yes
+●
+File types: .png, .svg, .jpg, .jpeg
+●
+Max files: 1
+●
+Max file size: 10 MB
+Question 15:
+●
+Type: Short answer
+●
+Question: "Primary Brand Color (if you have one)"
+●
+Required: No
+●
+Help text: "Enter a hex code (e.g., #234654) or color name. Leave blank to use our
+default.
+"
+●
+Example: "#0066CC"
+Question 16:
+●
+Type: Short answer
+●
+Question: "Secondary/Accent Color (if you have one)"
+●
+Required: No
+●
+Help text: "Leave blank to use our default orange.
+"
+●
+Example: "#FF6600"
+SECTION 3: WEBSITE CONTENT
+Section Title: Website Content Section Description: This content will appear on your website
+Question 17:
+●
+Type: Short answer
+●
+Question: "Main Headline for Homepage" *
+●
+Required: Yes
+●
+Help text: "What's the first thing visitors should see?"
+●
+Example: "24/7 Emergency HVAC Services in Atlanta"
+Question 18:
+●
+Type: Short answer
+●
+Question: "Subheadline" *
+●
+Required: Yes
+●
+Help text: "Supporting text under your main headline"
+●
+Example: "Fast Response • Expert Technicians • Fair Pricing"
+Question 19:
+●
+Type: Paragraph
+●
+Question: "Short Description (2-3 sentences)" *
+●
+Required: Yes
+●
+Help text: "Describe what you do and why customers should choose you"
+●
+Example: "When your AC breaks in the Georgia heat, you need help FAST. Our certified
+technicians respond within 1 hour for emergency service.
+"
+Question 20:
+●
+Type: Paragraph
+●
+Question: "About Us (3-5 sentences)" *
+●
+Required: Yes
+●
+Help text: "Tell customers about your business, experience, and approach"
+●
+Example: "With over 20 years of experience, Atlanta Emergency HVAC specializes in
+fast, reliable HVAC repair and installation...
+"
+Question 21:
+●
+Type: Paragraph
+●
+Question: "List Your Services (8 services, one per line)" *
+●
+Required: Yes
+●
+Help text: "Enter one service per line. Examples: Emergency AC Repair Emergency
+Heating Repair AC Installation Heating Installation Maintenance Plans Duct Cleaning
+Thermostat Installation Air Quality Services"
+Question 22:
+●
+Type: Checkboxes
+●
+Question: "Select 5 Trust Badges to Display" *
+●
+Required: Yes (Must select exactly 5)
+●
+Options:
+○
+24/7 Emergency Service
+○
+Licensed & Insured
+○
+20+ Years Experience
+○
+Same-Day Service
+○
+100% Satisfaction Guaranteed
+○
+Locally Owned & Operated
+○
+Certified Technicians
+○
+Free Estimates
+○
+Family Owned
+○
+Fully Licensed
+Question 23:
+●
+Type: Paragraph
+●
+Question: "Frequently Asked Question #1" *
+●
+Required: Yes
+●
+Help text: "Format: Question on line 1, Answer on line 2"
+●
+Example: "How quickly can you respond to emergencies? We respond within 1 hour. Our
+technicians are on-call 24/7.
+"
+Question 24:
+●
+Type: Paragraph
+●
+Question: "Frequently Asked Question #2" *
+●
+Required: Yes
+●
+Help text: "Format: Question on line 1, Answer on line 2"
+Question 25:
+●
+Type: Paragraph
+●
+Question: "Frequently Asked Question #3" *
+●
+Required: Yes
+●
+Help text: "Format: Question on line 1, Answer on line 2"
+Question 26:
+●
+Type: Paragraph
+●
+Question: "Frequently Asked Question #4 (optional)"
+●
+Required: No
+Question 27:
+●
+Type: Paragraph
+●
+Question: "Frequently Asked Question #5 (optional)"
+●
+Required: No
+Question 28:
+●
+Type: Paragraph
+●
+Question: "Service Areas (list all cities/neighborhoods you serve, one per line)" *
+●
+Required: Yes
+●
+Example: "Midtown Atlanta Buckhead Virginia Highland Decatur Sandy Springs"
+Question 29:
+●
+Type: Short answer
+●
+Question: "Monday Hours" *
+●
+Required: Yes
+●
+Example: "8:00 AM - 5:00 PM" or "24/7 Emergency Service"
+Question 30:
+●
+Type: Short answer
+●
+Question: "Tuesday Hours" *
+●
+Required: Yes
+Question 31:
+●
+Type: Short answer
+●
+Question: "Wednesday Hours" *
+●
+Required: Yes
+Question 32:
+●
+Type: Short answer
+●
+Question: "Thursday Hours" *
+●
+Required: Yes
+Question 33:
+●
+Type: Short answer
+●
+Question: "Friday Hours" *
+●
+Required: Yes
+Question 34:
+●
+Type: Short answer
+●
+Question: "Saturday Hours" *
+●
+Required: Yes
+Question 35:
+●
+Type: Short answer
+●
+Question: "Sunday Hours" *
+●
+Required: Yes
+SECTION 4: PHOTOS & MEDIA
+Section Title: Photos & Media Section Description: Upload photos of your work
+Question 36:
+●
+Type: File upload
+●
+Question: "Hero Image (main background image for homepage)" *
+●
+Required: Yes
+●
+File types: .jpg, .jpeg, .png
+●
+Max files: 1
+●
+Max file size: 10 MB
+●
+Help text: "High quality image (1920x1080 or larger). Can be of your team, your work, or
+related to your services.
+"
+Question 37:
+●
+Type: File upload
+●
+Question: "Gallery Images (photos of your work, before/after photos)" *
+●
+Required: Yes
+●
+File types: .jpg, .jpeg, .png
+●
+Max files: 15
+●
+Max file size: 10 MB per file
+●
+Help text: "Upload 8-12 photos. These will appear in your gallery section. Before/after
+photos work great!"
+Question 38:
+●
+Type: File upload
+●
+Question: "About Us Image (team photo or work photo)"
+●
+Required: No
+●
+File types: .jpg, .jpeg, .png
+●
+Max files: 1
+●
+Max file size: 10 MB
+●
+Help text: "Optional: A photo of your team or you at work"
+Question 39:
+●
+Type: Multiple choice
+●
+Question: "If you don't have enough photos, can we use professional stock photos?"
+●
+Required: No
+●
+Options:
+○
+Yes, please use stock photos as needed
+○
+No, only use the photos I provided
+SECTION 5: INTEGRATIONS
+Section Title: Integrations Section Description: Connect your phone, Google, and other
+services
+Question 40:
+●
+Type: Short answer
+●
+Question: "What phone number should we forward calls to?" *
+●
+Required: Yes
+●
+Help text: "This is YOUR real phone number. We'll get you a tracking number that
+forwards to this.
+"
+●
+Example: "(404) 555-0100"
+Question 41:
+●
+Type: Short answer
+●
+Question: "Preferred area code for your tracking number"
+●
+Required: No
+●
+Help text: "What area code do you want for the tracking number customers will call?
+Usually matches your service area.
+"
+●
+Example: "404"
+Question 42:
+●
+Type: Paragraph
+●
+Question: "Custom SMS Auto-Response (optional)"
+●
+Required: No
+●
+Help text: "When someone texts your tracking number, what message should they
+receive? Leave blank to use our default.
+"
+●
+Example: "Thanks for contacting [Business Name]! We received your message and will
+call you back within 30 minutes.
+"
+Question 43:
+●
+Type: Short answer
+●
+Question: "Google Business Profile URL"
+●
+Required: No
+●
+Help text: "Your Google review page link (e.g., https://g.page/your-business). We need
+this to embed reviews.
+"
+●
+Example: "https://g.page/atlanta-hvac"
+Question 44:
+●
+Type: Paragraph
+●
+Question: "Google Maps Embed Code"
+●
+Required: No
+●
+Help text: "Go to Google Maps → Search your business → Share → Embed a map →
+Copy the HTML code and paste here"
+Question 45:
+●
+Type: Multiple choice
+●
+Question: "Need help setting up Google Business Profile or Google Maps?"
+●
+Required: No
+●
+Options:
+○
+Yes, please help me set these up (+$50 setup fee)
+○
+No, I'll provide the links
+SECTION 6: BILLING & AGREEMENT
+Section Title: Billing & Agreement Section Description: Final details
+Question 46:
+●
+Type: Multiple choice
+●
+Question: "Payment Plan" *
+●
+Required: Yes
+●
+Options:
+○
+$497 setup fee + $297/month (cancel anytime)
+○
+$0 setup fee + $297/month (6-month commitment)
+Question 47:
+●
+Type: Multiple choice
+●
+Question: "Preferred Payment Method" *
+●
+Required: Yes
+●
+Options:
+○
+Credit Card (we'll send Stripe link)
+○
+ACH/Bank Transfer
+○
+Invoice (Net 15 terms)
+Question 48:
+●
+Type: Short answer
+●
+Question: "Billing Email Address"
+●
+Required: No
+●
+Validation: Email
+●
+Help text: "Where should we send invoices? Leave blank to use the email at the top of
+this form.
+"
+Question 49:
+●
+Type: Checkboxes
+●
+Question: "Agreement" *
+●
+Required: Yes (must check)
+●
+Options:
+○
+I confirm all information provided is accurate and approve the website setup. I
+understand the site will be live within 48-72 hours and monthly billing begins
+upon launch.
+Question 50:
+●
+Type: Paragraph
+●
+Question: "Additional Notes or Special Requests"
+●
+Required: No
+●
+Help text: "Anything else we should know?"
+CONFIRMATION MESSAGE
+After form submission, show this message:
+Thank you! Your website setup is confirmed.
+What happens next:
+1. We'll review your submission within 24 hours
+2. If we need anything else, we'll email you
+3. Your site will be live within 48-72 hours
+4. We'll send you the tracking phone number and website URL
+Questions? Email jeff@cherysolutions.com
+- Chery Solutions LLC
+Email notification settings:
+●
+Send you (admin) an email when form is submitted
+●
+Send respondent a copy of their responses
