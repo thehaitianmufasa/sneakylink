@@ -12,7 +12,7 @@
         "Verify Inter Bold font for headers",
         "Verify responsive layout"
       ],
-      "passes": false,
+      "passes": true,
       "blocked_by": [],
       "notes": ""
     },
@@ -29,7 +29,9 @@
         "Verify error message styling (Danger Red #ef4444)"
       ],
       "passes": false,
-      "blocked_by": ["onboarding-page1-layout"],
+      "blocked_by": [
+        "onboarding-page1-layout"
+      ],
       "notes": ""
     },
     {
@@ -45,7 +47,9 @@
         "Verify number input type"
       ],
       "passes": false,
-      "blocked_by": ["onboarding-page1-layout"],
+      "blocked_by": [
+        "onboarding-page1-layout"
+      ],
       "notes": ""
     },
     {
@@ -64,7 +68,9 @@
         "Verify at least one must be selected (validation)"
       ],
       "passes": false,
-      "blocked_by": ["onboarding-page1-layout"],
+      "blocked_by": [
+        "onboarding-page1-layout"
+      ],
       "notes": "Store as: ['electrical', 'heights', 'loto', 'equipment']"
     },
     {
@@ -79,7 +85,9 @@
         "Verify sticky position at top on mobile"
       ],
       "passes": false,
-      "blocked_by": ["onboarding-page1-layout"],
+      "blocked_by": [
+        "onboarding-page1-layout"
+      ],
       "notes": ""
     },
     {
@@ -96,7 +104,10 @@
         "Refresh page and verify data persists"
       ],
       "passes": false,
-      "blocked_by": ["onboarding-company-name", "onboarding-employee-count"],
+      "blocked_by": [
+        "onboarding-company-name",
+        "onboarding-employee-count"
+      ],
       "notes": "Use debouncing to avoid excessive saves"
     },
     {
@@ -113,7 +124,12 @@
         "Verify navigation to Page 2"
       ],
       "passes": false,
-      "blocked_by": ["onboarding-page1-layout", "onboarding-company-name", "onboarding-employee-count", "onboarding-work-types"],
+      "blocked_by": [
+        "onboarding-page1-layout",
+        "onboarding-company-name",
+        "onboarding-employee-count",
+        "onboarding-work-types"
+      ],
       "notes": ""
     },
     {
@@ -129,7 +145,9 @@
         "Verify responsive layout"
       ],
       "passes": false,
-      "blocked_by": ["onboarding-next-button"],
+      "blocked_by": [
+        "onboarding-next-button"
+      ],
       "notes": ""
     },
     {
@@ -147,7 +165,9 @@
         "Test validation (all required)"
       ],
       "passes": false,
-      "blocked_by": ["onboarding-page2-layout"],
+      "blocked_by": [
+        "onboarding-page2-layout"
+      ],
       "notes": ""
     },
     {
@@ -165,7 +185,9 @@
         "Verify data saves to Supabase"
       ],
       "passes": false,
-      "blocked_by": ["onboarding-page2-layout"],
+      "blocked_by": [
+        "onboarding-page2-layout"
+      ],
       "notes": ""
     },
     {
@@ -179,7 +201,9 @@
         "Verify text shows '2 of 2'"
       ],
       "passes": false,
-      "blocked_by": ["onboarding-page2-layout"],
+      "blocked_by": [
+        "onboarding-page2-layout"
+      ],
       "notes": ""
     },
     {
@@ -194,7 +218,9 @@
         "Verify all Page 1 data still filled in"
       ],
       "passes": false,
-      "blocked_by": ["onboarding-page2-layout"],
+      "blocked_by": [
+        "onboarding-page2-layout"
+      ],
       "notes": ""
     },
     {
@@ -210,7 +236,11 @@
         "Verify vendor record marked as onboarding_complete in DB"
       ],
       "passes": false,
-      "blocked_by": ["onboarding-page2-layout", "onboarding-address-fields", "onboarding-contact-fields"],
+      "blocked_by": [
+        "onboarding-page2-layout",
+        "onboarding-address-fields",
+        "onboarding-contact-fields"
+      ],
       "notes": ""
     },
     {
@@ -226,7 +256,9 @@
         "Verify clerk_user_id saved to vendors table"
       ],
       "passes": false,
-      "blocked_by": ["onboarding-page1-layout"],
+      "blocked_by": [
+        "onboarding-page1-layout"
+      ],
       "notes": ""
     },
     {
@@ -242,7 +274,10 @@
         "Test all interactions on mobile"
       ],
       "passes": false,
-      "blocked_by": ["onboarding-page1-layout", "onboarding-page2-layout"],
+      "blocked_by": [
+        "onboarding-page1-layout",
+        "onboarding-page2-layout"
+      ],
       "notes": ""
     },
     {
@@ -258,7 +293,9 @@
         "Verify responsive on mobile (sidebar becomes dropdown)"
       ],
       "passes": false,
-      "blocked_by": ["onboarding-complete-button"],
+      "blocked_by": [
+        "onboarding-complete-button"
+      ],
       "notes": ""
     },
     {
@@ -274,7 +311,9 @@
         "Verify answers save to questionnaire_responses table"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-layout"],
+      "blocked_by": [
+        "questionnaire-layout"
+      ],
       "notes": "Questions: EHS policy, incident tracking, hazard reporting, safety training, PPE program"
     },
     {
@@ -291,7 +330,9 @@
         "Verify file_path saved to documents table"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-core-safety"],
+      "blocked_by": [
+        "questionnaire-section-core-safety"
+      ],
       "notes": ""
     },
     {
@@ -306,7 +347,9 @@
         "If Yes, verify additional field: 'Describe tracking system'"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-core-safety"],
+      "blocked_by": [
+        "questionnaire-section-core-safety"
+      ],
       "notes": ""
     },
     {
@@ -321,7 +364,9 @@
         "Verify answer saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-core-safety"],
+      "blocked_by": [
+        "questionnaire-section-core-safety"
+      ],
       "notes": ""
     },
     {
@@ -336,7 +381,9 @@
         "Verify answer saves with frequency"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-core-safety"],
+      "blocked_by": [
+        "questionnaire-section-core-safety"
+      ],
       "notes": ""
     },
     {
@@ -351,7 +398,9 @@
         "Verify answer saves with PPE types array"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-core-safety"],
+      "blocked_by": [
+        "questionnaire-section-core-safety"
+      ],
       "notes": ""
     },
     {
@@ -367,7 +416,9 @@
         "Verify answers save"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-layout"],
+      "blocked_by": [
+        "questionnaire-layout"
+      ],
       "notes": "Questions: General liability, workers comp, auto insurance, umbrella, certificates"
     },
     {
@@ -383,7 +434,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-insurance"],
+      "blocked_by": [
+        "questionnaire-section-insurance"
+      ],
       "notes": ""
     },
     {
@@ -399,7 +452,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-insurance"],
+      "blocked_by": [
+        "questionnaire-section-insurance"
+      ],
       "notes": ""
     },
     {
@@ -414,7 +469,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-insurance"],
+      "blocked_by": [
+        "questionnaire-section-insurance"
+      ],
       "notes": ""
     },
     {
@@ -429,7 +486,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-insurance"],
+      "blocked_by": [
+        "questionnaire-section-insurance"
+      ],
       "notes": ""
     },
     {
@@ -445,7 +504,9 @@
         "Verify files listed in documents table"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-insurance"],
+      "blocked_by": [
+        "questionnaire-section-insurance"
+      ],
       "notes": ""
     },
     {
@@ -461,7 +522,9 @@
         "Verify answers save"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-layout"],
+      "blocked_by": [
+        "questionnaire-layout"
+      ],
       "notes": "Questions: TRIR, DART, EMR, lost time incidents, near misses"
     },
     {
@@ -476,7 +539,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-metrics"],
+      "blocked_by": [
+        "questionnaire-section-metrics"
+      ],
       "notes": ""
     },
     {
@@ -490,7 +555,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-metrics"],
+      "blocked_by": [
+        "questionnaire-section-metrics"
+      ],
       "notes": ""
     },
     {
@@ -504,7 +571,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-metrics"],
+      "blocked_by": [
+        "questionnaire-section-metrics"
+      ],
       "notes": ""
     },
     {
@@ -519,7 +588,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-metrics"],
+      "blocked_by": [
+        "questionnaire-section-metrics"
+      ],
       "notes": ""
     },
     {
@@ -534,7 +605,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-metrics"],
+      "blocked_by": [
+        "questionnaire-section-metrics"
+      ],
       "notes": ""
     },
     {
@@ -550,7 +623,9 @@
         "Verify answers save"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-layout"],
+      "blocked_by": [
+        "questionnaire-layout"
+      ],
       "notes": "Questions: Years in business, current customers, references, certifications, union affiliation"
     },
     {
@@ -565,7 +640,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-relationships"],
+      "blocked_by": [
+        "questionnaire-section-relationships"
+      ],
       "notes": ""
     },
     {
@@ -579,7 +656,9 @@
         "Verify data saves as array"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-relationships"],
+      "blocked_by": [
+        "questionnaire-section-relationships"
+      ],
       "notes": ""
     },
     {
@@ -593,7 +672,9 @@
         "Verify data saves as jsonb array"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-relationships"],
+      "blocked_by": [
+        "questionnaire-section-relationships"
+      ],
       "notes": ""
     },
     {
@@ -608,7 +689,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-relationships"],
+      "blocked_by": [
+        "questionnaire-section-relationships"
+      ],
       "notes": ""
     },
     {
@@ -623,7 +706,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-relationships"],
+      "blocked_by": [
+        "questionnaire-section-relationships"
+      ],
       "notes": ""
     },
     {
@@ -638,7 +723,10 @@
         "Click section and verify questions load"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-layout", "onboarding-work-types"],
+      "blocked_by": [
+        "questionnaire-layout",
+        "onboarding-work-types"
+      ],
       "notes": "Only shows if 'electrical' in work_types array"
     },
     {
@@ -654,7 +742,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-electrical"],
+      "blocked_by": [
+        "questionnaire-section-electrical"
+      ],
       "notes": ""
     },
     {
@@ -668,7 +758,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-electrical"],
+      "blocked_by": [
+        "questionnaire-section-electrical"
+      ],
       "notes": ""
     },
     {
@@ -683,7 +775,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-electrical"],
+      "blocked_by": [
+        "questionnaire-section-electrical"
+      ],
       "notes": ""
     },
     {
@@ -698,7 +792,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-electrical"],
+      "blocked_by": [
+        "questionnaire-section-electrical"
+      ],
       "notes": ""
     },
     {
@@ -713,7 +809,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-electrical"],
+      "blocked_by": [
+        "questionnaire-section-electrical"
+      ],
       "notes": ""
     },
     {
@@ -728,7 +826,10 @@
         "Click section and verify questions load"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-layout", "onboarding-work-types"],
+      "blocked_by": [
+        "questionnaire-layout",
+        "onboarding-work-types"
+      ],
       "notes": ""
     },
     {
@@ -743,7 +844,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-heights"],
+      "blocked_by": [
+        "questionnaire-section-heights"
+      ],
       "notes": ""
     },
     {
@@ -757,7 +860,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-heights"],
+      "blocked_by": [
+        "questionnaire-section-heights"
+      ],
       "notes": ""
     },
     {
@@ -772,7 +877,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-heights"],
+      "blocked_by": [
+        "questionnaire-section-heights"
+      ],
       "notes": ""
     },
     {
@@ -786,7 +893,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-heights"],
+      "blocked_by": [
+        "questionnaire-section-heights"
+      ],
       "notes": ""
     },
     {
@@ -801,7 +910,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-heights"],
+      "blocked_by": [
+        "questionnaire-section-heights"
+      ],
       "notes": ""
     },
     {
@@ -816,7 +927,10 @@
         "Click section and verify questions load"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-layout", "onboarding-work-types"],
+      "blocked_by": [
+        "questionnaire-layout",
+        "onboarding-work-types"
+      ],
       "notes": ""
     },
     {
@@ -831,7 +945,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-loto"],
+      "blocked_by": [
+        "questionnaire-section-loto"
+      ],
       "notes": ""
     },
     {
@@ -846,7 +962,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-loto"],
+      "blocked_by": [
+        "questionnaire-section-loto"
+      ],
       "notes": ""
     },
     {
@@ -861,7 +979,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-loto"],
+      "blocked_by": [
+        "questionnaire-section-loto"
+      ],
       "notes": ""
     },
     {
@@ -875,7 +995,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-loto"],
+      "blocked_by": [
+        "questionnaire-section-loto"
+      ],
       "notes": ""
     },
     {
@@ -890,7 +1012,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-loto"],
+      "blocked_by": [
+        "questionnaire-section-loto"
+      ],
       "notes": ""
     },
     {
@@ -905,7 +1029,10 @@
         "Click section and verify questions load"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-layout", "onboarding-work-types"],
+      "blocked_by": [
+        "questionnaire-layout",
+        "onboarding-work-types"
+      ],
       "notes": ""
     },
     {
@@ -919,7 +1046,9 @@
         "Verify data saves as array"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-equipment"],
+      "blocked_by": [
+        "questionnaire-section-equipment"
+      ],
       "notes": ""
     },
     {
@@ -934,7 +1063,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-equipment"],
+      "blocked_by": [
+        "questionnaire-section-equipment"
+      ],
       "notes": ""
     },
     {
@@ -949,7 +1080,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-equipment"],
+      "blocked_by": [
+        "questionnaire-section-equipment"
+      ],
       "notes": ""
     },
     {
@@ -964,7 +1097,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-equipment"],
+      "blocked_by": [
+        "questionnaire-section-equipment"
+      ],
       "notes": ""
     },
     {
@@ -979,7 +1114,9 @@
         "Verify data saves"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-section-equipment"],
+      "blocked_by": [
+        "questionnaire-section-equipment"
+      ],
       "notes": ""
     },
     {
@@ -995,7 +1132,9 @@
         "Verify progress shows 100%"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-layout"],
+      "blocked_by": [
+        "questionnaire-layout"
+      ],
       "notes": ""
     },
     {
@@ -1010,7 +1149,9 @@
         "Verify 'Saved' checkmark appears after save"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-layout"],
+      "blocked_by": [
+        "questionnaire-layout"
+      ],
       "notes": ""
     },
     {
@@ -1026,7 +1167,9 @@
         "Verify error styled with Danger Red"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-layout"],
+      "blocked_by": [
+        "questionnaire-layout"
+      ],
       "notes": ""
     },
     {
@@ -1042,7 +1185,9 @@
         "Verify questionnaire_complete flag set in DB"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-layout"],
+      "blocked_by": [
+        "questionnaire-layout"
+      ],
       "notes": ""
     },
     {
@@ -1057,7 +1202,9 @@
         "Verify file upload works on mobile"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-layout"],
+      "blocked_by": [
+        "questionnaire-layout"
+      ],
       "notes": ""
     },
     {
@@ -1073,7 +1220,9 @@
         "Verify responsive layout"
       ],
       "passes": false,
-      "blocked_by": ["questionnaire-complete-button"],
+      "blocked_by": [
+        "questionnaire-complete-button"
+      ],
       "notes": ""
     },
     {
@@ -1089,7 +1238,9 @@
         "Verify score styled with Danger Red if <50"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-layout"],
+      "blocked_by": [
+        "dashboard-layout"
+      ],
       "notes": ""
     },
     {
@@ -1105,7 +1256,9 @@
         "Verify score is ~50"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-score-card"],
+      "blocked_by": [
+        "dashboard-score-card"
+      ],
       "notes": "Algorithm: (yes_answers / total_questions) * 100, with weighted sections"
     },
     {
@@ -1120,7 +1273,9 @@
         "Verify color coding by score"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-layout"],
+      "blocked_by": [
+        "dashboard-layout"
+      ],
       "notes": "Sections: Core Safety, Insurance, Metrics, Relationships, Work Type"
     },
     {
@@ -1136,7 +1291,9 @@
         "Click action item and verify navigation to question"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-layout"],
+      "blocked_by": [
+        "dashboard-layout"
+      ],
       "notes": ""
     },
     {
@@ -1152,7 +1309,9 @@
         "Verify documents organized by category"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-layout"],
+      "blocked_by": [
+        "dashboard-layout"
+      ],
       "notes": ""
     },
     {
@@ -1168,7 +1327,9 @@
         "Verify modal opens"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-layout"],
+      "blocked_by": [
+        "dashboard-layout"
+      ],
       "notes": ""
     },
     {
@@ -1185,7 +1346,9 @@
         "Verify customer saved to customers table"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-customer-management"],
+      "blocked_by": [
+        "dashboard-customer-management"
+      ],
       "notes": ""
     },
     {
@@ -1200,7 +1363,9 @@
         "Click button and verify PDF generation starts"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-add-customer"],
+      "blocked_by": [
+        "dashboard-add-customer"
+      ],
       "notes": ""
     },
     {
@@ -1214,7 +1379,9 @@
         "Verify navigation to /onboarding with data pre-filled"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-layout"],
+      "blocked_by": [
+        "dashboard-layout"
+      ],
       "notes": ""
     },
     {
@@ -1228,7 +1395,9 @@
         "Verify navigation to /questionnaire with answers pre-filled"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-layout"],
+      "blocked_by": [
+        "dashboard-layout"
+      ],
       "notes": ""
     },
     {
@@ -1244,7 +1413,9 @@
         "Verify customer list scrolls horizontally"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-layout"],
+      "blocked_by": [
+        "dashboard-layout"
+      ],
       "notes": ""
     },
     {
@@ -1276,7 +1447,9 @@
         "Verify cover page shows compliance score"
       ],
       "passes": false,
-      "blocked_by": ["pdf-export-template"],
+      "blocked_by": [
+        "pdf-export-template"
+      ],
       "notes": ""
     },
     {
@@ -1293,7 +1466,9 @@
         "- Work types"
       ],
       "passes": false,
-      "blocked_by": ["pdf-export-template"],
+      "blocked_by": [
+        "pdf-export-template"
+      ],
       "notes": ""
     },
     {
@@ -1309,7 +1484,9 @@
         "- Chart/graph visualization"
       ],
       "passes": false,
-      "blocked_by": ["pdf-export-template"],
+      "blocked_by": [
+        "pdf-export-template"
+      ],
       "notes": ""
     },
     {
@@ -1325,7 +1502,9 @@
         "Verify 'No' answers styled with Danger Red"
       ],
       "passes": false,
-      "blocked_by": ["pdf-export-template"],
+      "blocked_by": [
+        "pdf-export-template"
+      ],
       "notes": ""
     },
     {
@@ -1340,7 +1519,9 @@
         "Note: Actual file attachments handled separately"
       ],
       "passes": false,
-      "blocked_by": ["pdf-export-template"],
+      "blocked_by": [
+        "pdf-export-template"
+      ],
       "notes": ""
     },
     {
@@ -1370,7 +1551,10 @@
         "Verify PDF downloads correctly"
       ],
       "passes": false,
-      "blocked_by": ["pdf-puppeteer-setup", "pdf-export-template"],
+      "blocked_by": [
+        "pdf-puppeteer-setup",
+        "pdf-export-template"
+      ],
       "notes": ""
     },
     {
@@ -1385,7 +1569,9 @@
         "Verify export record created with metadata"
       ],
       "passes": false,
-      "blocked_by": ["pdf-generation-api"],
+      "blocked_by": [
+        "pdf-generation-api"
+      ],
       "notes": ""
     },
     {
@@ -1400,7 +1586,10 @@
         "Verify each export shows: Date, score, download link"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-customer-management", "pdf-storage-supabase"],
+      "blocked_by": [
+        "dashboard-customer-management",
+        "pdf-storage-supabase"
+      ],
       "notes": ""
     },
     {
@@ -1416,7 +1605,9 @@
         "Verify both PDFs in export history"
       ],
       "passes": false,
-      "blocked_by": ["pdf-storage-supabase"],
+      "blocked_by": [
+        "pdf-storage-supabase"
+      ],
       "notes": ""
     },
     {
@@ -1431,7 +1622,9 @@
         "Verify success message after completion"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-export-pdf-button"],
+      "blocked_by": [
+        "dashboard-export-pdf-button"
+      ],
       "notes": ""
     },
     {
@@ -1446,7 +1639,9 @@
         "Verify button re-enabled for retry"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-export-pdf-button"],
+      "blocked_by": [
+        "dashboard-export-pdf-button"
+      ],
       "notes": ""
     },
     {
@@ -1494,7 +1689,9 @@
         "Verify redirect to /sign-in"
       ],
       "passes": false,
-      "blocked_by": ["clerk-signin-page"],
+      "blocked_by": [
+        "clerk-signin-page"
+      ],
       "notes": ""
     },
     {
@@ -1509,7 +1706,9 @@
         "Verify redirect to /onboarding"
       ],
       "passes": false,
-      "blocked_by": ["clerk-signup-page"],
+      "blocked_by": [
+        "clerk-signup-page"
+      ],
       "notes": ""
     },
     {
@@ -1525,7 +1724,9 @@
         "Verify email updated in Clerk"
       ],
       "passes": false,
-      "blocked_by": ["clerk-signin-page"],
+      "blocked_by": [
+        "clerk-signin-page"
+      ],
       "notes": ""
     },
     {
@@ -1621,7 +1822,9 @@
         "Verify testimonials carousel works"
       ],
       "passes": false,
-      "blocked_by": ["landing-page-hero"],
+      "blocked_by": [
+        "landing-page-hero"
+      ],
       "notes": ""
     },
     {
@@ -1654,7 +1857,9 @@
         "Click link and verify navigation"
       ],
       "passes": false,
-      "blocked_by": ["navigation-header"],
+      "blocked_by": [
+        "navigation-header"
+      ],
       "notes": ""
     },
     {
@@ -1701,7 +1906,9 @@
         "Verify success checkmark after upload"
       ],
       "passes": false,
-      "blocked_by": ["file-upload-component"],
+      "blocked_by": [
+        "file-upload-component"
+      ],
       "notes": ""
     },
     {
@@ -1718,7 +1925,9 @@
         "Verify error message"
       ],
       "passes": false,
-      "blocked_by": ["file-upload-component"],
+      "blocked_by": [
+        "file-upload-component"
+      ],
       "notes": ""
     },
     {
@@ -1799,7 +2008,9 @@
         "Test preview URL"
       ],
       "passes": false,
-      "blocked_by": ["vercel-deployment-config"],
+      "blocked_by": [
+        "vercel-deployment-config"
+      ],
       "notes": ""
     },
     {
@@ -1815,7 +2026,9 @@
         "Verify site loads correctly"
       ],
       "passes": false,
-      "blocked_by": ["vercel-deployment-config"],
+      "blocked_by": [
+        "vercel-deployment-config"
+      ],
       "notes": ""
     },
     {
@@ -2200,7 +2413,9 @@
         "Verify events in GA dashboard"
       ],
       "passes": false,
-      "blocked_by": ["analytics-google-analytics"],
+      "blocked_by": [
+        "analytics-google-analytics"
+      ],
       "notes": ""
     },
     {
@@ -2338,7 +2553,9 @@
         "Verify CTA link works"
       ],
       "passes": false,
-      "blocked_by": ["email-notifications-setup"],
+      "blocked_by": [
+        "email-notifications-setup"
+      ],
       "notes": ""
     },
     {
@@ -2353,7 +2570,9 @@
         "Verify link works"
       ],
       "passes": false,
-      "blocked_by": ["email-notifications-setup"],
+      "blocked_by": [
+        "email-notifications-setup"
+      ],
       "notes": ""
     },
     {
@@ -2458,7 +2677,9 @@
         "Verify Stripe customer portal opens"
       ],
       "passes": false,
-      "blocked_by": ["pricing-stripe-integration"],
+      "blocked_by": [
+        "pricing-stripe-integration"
+      ],
       "notes": ""
     },
     {
@@ -2475,7 +2696,9 @@
         "Verify unlimited exports"
       ],
       "passes": false,
-      "blocked_by": ["pricing-stripe-integration"],
+      "blocked_by": [
+        "pricing-stripe-integration"
+      ],
       "notes": ""
     },
     {
@@ -2508,7 +2731,9 @@
         "Verify sorting by date, company name"
       ],
       "passes": false,
-      "blocked_by": ["admin-panel-access"],
+      "blocked_by": [
+        "admin-panel-access"
+      ],
       "notes": ""
     },
     {
@@ -2524,7 +2749,9 @@
         "Verify export history shown"
       ],
       "passes": false,
-      "blocked_by": ["admin-vendor-list"],
+      "blocked_by": [
+        "admin-vendor-list"
+      ],
       "notes": ""
     },
     {
@@ -2539,7 +2766,9 @@
         "Verify chart showing exports over time"
       ],
       "passes": false,
-      "blocked_by": ["admin-panel-access"],
+      "blocked_by": [
+        "admin-panel-access"
+      ],
       "notes": ""
     },
     {
@@ -2857,7 +3086,9 @@
         "Verify filtered results"
       ],
       "passes": false,
-      "blocked_by": ["admin-vendor-list"],
+      "blocked_by": [
+        "admin-vendor-list"
+      ],
       "notes": ""
     },
     {
@@ -2872,7 +3103,9 @@
         "Verify filtered results"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-customer-management"],
+      "blocked_by": [
+        "dashboard-customer-management"
+      ],
       "notes": ""
     },
     {
@@ -2888,7 +3121,9 @@
         "Verify saved to customers table"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-customer-management"],
+      "blocked_by": [
+        "dashboard-customer-management"
+      ],
       "notes": ""
     },
     {
@@ -2904,7 +3139,9 @@
         "Verify download as ZIP file"
       ],
       "passes": false,
-      "blocked_by": ["dashboard-customer-management"],
+      "blocked_by": [
+        "dashboard-customer-management"
+      ],
       "notes": ""
     },
     {
@@ -3043,7 +3280,9 @@
         "Fix any issues"
       ],
       "passes": false,
-      "blocked_by": ["release-beta-testing"],
+      "blocked_by": [
+        "release-beta-testing"
+      ],
       "notes": ""
     },
     {
@@ -3059,7 +3298,9 @@
         "Verify everything stable"
       ],
       "passes": false,
-      "blocked_by": ["release-soft-launch"],
+      "blocked_by": [
+        "release-soft-launch"
+      ],
       "notes": ""
     },
     {
