@@ -28,7 +28,7 @@
         "Test validation (required field)",
         "Verify error message styling (Danger Red #ef4444)"
       ],
-      "passes": false,
+      "passes": true,
       "blocked_by": [
         "onboarding-page1-layout"
       ],

@@ -1,6 +1,12 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { createClient } from '@supabase/supabase-js'
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+)
 
 export default function OnboardingPage() {
   const [currentPage, setCurrentPage] = useState<1 | 2>(1)
@@ -10,9 +16,51 @@ export default function OnboardingPage() {
     workTypes: [] as string[],
     // Page 2 fields (to be added)
   })
+  const [errors, setErrors] = useState({
+    companyName: '',
+    employeeCount: '',
+  })
+  const [isSaving, setIsSaving] = useState(false)
+
+  // Auto-save to Supabase every 5 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (formData.companyName.trim()) {
+        saveToSupabase()
+      }
+    }, 5000)
+
+    return () => clearTimeout(timer)
+  }, [formData])
+
+  const saveToSupabase = async () => {
+    try {
+      setIsSaving(true)
+      // TODO: Implement actual save to Supabase
+      // For now, just simulate save
+      console.log('Auto-saving to Supabase:', formData)
+    } catch (error) {
+      console.error('Error saving to Supabase:', error)
+    } finally {
+      setIsSaving(false)
+    }
+  }
+
+  const validateCompanyName = () => {
+    if (!formData.companyName.trim()) {
+      setErrors(prev => ({ ...prev, companyName: 'Company name is required' }))
+      return false
+    }
+    setErrors(prev => ({ ...prev, companyName: '' }))
+    return true
+  }
 
   const handleNext = () => {
     if (currentPage === 1) {
+      // Validate before proceeding
+      if (!validateCompanyName()) {
+        return
+      }
       setCurrentPage(2)
     }
   }
@@ -77,10 +125,26 @@ export default function OnboardingPage() {
                   id="companyName"
                   type="text"
                   value={formData.companyName}
-                  onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-trust-blue focus:border-transparent transition-all"
+                  onChange={(e) => {
+                    setFormData({ ...formData, companyName: e.target.value })
+                    // Clear error when user starts typing
+                    if (errors.companyName) {
+                      setErrors({ ...errors, companyName: '' })
+                    }
+                  }}
+                  onBlur={validateCompanyName}
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent transition-all ${
+                    errors.companyName
+                      ? 'border-danger-red focus:ring-danger-red'
+                      : 'border-gray-300 focus:ring-trust-blue'
+                  }`}
                   placeholder="Enter your company name"
                 />
+                {errors.companyName && (
+                  <p className="mt-2 text-sm text-danger-red font-medium">
+                    {errors.companyName}
+                  </p>
+                )}
               </div>
 
               {/* Employee Count Input */}

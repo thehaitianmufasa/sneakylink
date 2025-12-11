@@ -202,4 +202,37 @@ NEXT FEATURE:
 
 ---
 
+## Session 3 (Coding Agent) - December 11, 2025
+
+STATUS: Complete
+FEATURE WORKED ON: onboarding-company-name (priority 2)
+COMPLETED:
+- Added validation to company name input field
+- Implemented required field validation
+- Added error state styling with Danger Red (#ef4444)
+- Error message displays when clicking Next with empty field
+- Error clears automatically when user starts typing
+- Added onBlur validation for better UX
+- Integrated Supabase client for auto-save functionality
+- Implemented auto-save to Supabase every 5 seconds
+- Tested all validation scenarios at http://localhost:3000/onboarding
+- Updated feature_list.json: onboarding-company-name set to passes:true
+- Committed changes to git
+
+TESTS PASSED:
+✓ Required field validation works
+✓ Error message displays "Company name is required"
+✓ Danger Red (#ef4444) color verified on error text and border
+✓ Error clears when user types
+✓ Auto-save fires after 5 seconds (verified in console)
+✓ Form data persists in state
+
+BLOCKERS:
+- None
+
+NEXT FEATURE:
+- onboarding-employee-count (priority 3) - Add validation to employee count field
+
+---
+
 END OF LOG
