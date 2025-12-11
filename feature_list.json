@@ -84,7 +84,7 @@
         "Verify text shows '1 of 2'",
         "Verify sticky position at top on mobile"
       ],
-      "passes": false,
+      "passes": true,
       "blocked_by": [
         "onboarding-page1-layout"
       ],
