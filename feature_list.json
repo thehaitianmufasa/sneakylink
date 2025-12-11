@@ -1,0 +1,3097 @@
+{
+  "features": [
+    {
+      "id": "onboarding-page1-layout",
+      "category": "onboarding",
+      "priority": 1,
+      "description": "Onboarding Page 1 layout created with Compliance Clarity theme",
+      "steps": [
+        "Navigate to /onboarding",
+        "Verify page loads",
+        "Verify Trust Blue (#2563eb) used for primary elements",
+        "Verify Inter Bold font for headers",
+        "Verify responsive layout"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "onboarding-company-name",
+      "category": "onboarding",
+      "priority": 2,
+      "description": "Company name input field functional with validation",
+      "steps": [
+        "Navigate to /onboarding",
+        "Enter company name",
+        "Verify input saves to Supabase",
+        "Test validation (required field)",
+        "Verify error message styling (Danger Red #ef4444)"
+      ],
+      "passes": false,
+      "blocked_by": ["onboarding-page1-layout"],
+      "notes": ""
+    },
+    {
+      "id": "onboarding-employee-count",
+      "category": "onboarding",
+      "priority": 3,
+      "description": "Employee count input field functional with validation",
+      "steps": [
+        "Navigate to /onboarding",
+        "Enter employee count",
+        "Verify input saves to Supabase",
+        "Test validation (must be positive integer)",
+        "Verify number input type"
+      ],
+      "passes": false,
+      "blocked_by": ["onboarding-page1-layout"],
+      "notes": ""
+    },
+    {
+      "id": "onboarding-work-types",
+      "category": "onboarding",
+      "priority": 4,
+      "description": "Work type checkboxes (4 types) functional",
+      "steps": [
+        "Navigate to /onboarding",
+        "Check 'Electrical Work'",
+        "Check 'Work at Heights'",
+        "Check 'Lockout/Tagout (LOTO)'",
+        "Check 'Equipment Installation'",
+        "Verify selections save to Supabase as jsonb array",
+        "Test unchecking",
+        "Verify at least one must be selected (validation)"
+      ],
+      "passes": false,
+      "blocked_by": ["onboarding-page1-layout"],
+      "notes": "Store as: ['electrical', 'heights', 'loto', 'equipment']"
+    },
+    {
+      "id": "onboarding-progress-1of2",
+      "category": "onboarding",
+      "priority": 5,
+      "description": "Progress indicator '1 of 2' visible on Page 1",
+      "steps": [
+        "Navigate to /onboarding",
+        "Verify progress bar shows 50% (Success Green #10b981)",
+        "Verify text shows '1 of 2'",
+        "Verify sticky position at top on mobile"
+      ],
+      "passes": false,
+      "blocked_by": ["onboarding-page1-layout"],
+      "notes": ""
+    },
+    {
+      "id": "onboarding-autosave",
+      "category": "onboarding",
+      "priority": 6,
+      "description": "Auto-save to Supabase every 5 seconds",
+      "steps": [
+        "Navigate to /onboarding",
+        "Enter company name",
+        "Wait 5 seconds",
+        "Verify 'Auto-saving...' indicator appears",
+        "Check Supabase vendors table for saved data",
+        "Refresh page and verify data persists"
+      ],
+      "passes": false,
+      "blocked_by": ["onboarding-company-name", "onboarding-employee-count"],
+      "notes": "Use debouncing to avoid excessive saves"
+    },
+    {
+      "id": "onboarding-next-button",
+      "category": "onboarding",
+      "priority": 7,
+      "description": "Next button navigates to Page 2 with validation",
+      "steps": [
+        "Navigate to /onboarding",
+        "Click 'Next' without filling form",
+        "Verify validation errors appear",
+        "Fill company name, employee count, select work type",
+        "Click 'Next'",
+        "Verify navigation to Page 2"
+      ],
+      "passes": false,
+      "blocked_by": ["onboarding-page1-layout", "onboarding-company-name", "onboarding-employee-count", "onboarding-work-types"],
+      "notes": ""
+    },
+    {
+      "id": "onboarding-page2-layout",
+      "category": "onboarding",
+      "priority": 8,
+      "description": "Onboarding Page 2 layout created with Compliance Clarity theme",
+      "steps": [
+        "Navigate to /onboarding (complete Page 1)",
+        "Click 'Next'",
+        "Verify Page 2 loads",
+        "Verify Trust Blue primary elements",
+        "Verify responsive layout"
+      ],
+      "passes": false,
+      "blocked_by": ["onboarding-next-button"],
+      "notes": ""
+    },
+    {
+      "id": "onboarding-address-fields",
+      "category": "onboarding",
+      "priority": 9,
+      "description": "Address fields functional (street, city, state, zip)",
+      "steps": [
+        "Navigate to /onboarding Page 2",
+        "Enter street address",
+        "Enter city",
+        "Select state from dropdown",
+        "Enter zip code",
+        "Verify all fields save to Supabase as jsonb",
+        "Test validation (all required)"
+      ],
+      "passes": false,
+      "blocked_by": ["onboarding-page2-layout"],
+      "notes": ""
+    },
+    {
+      "id": "onboarding-contact-fields",
+      "category": "onboarding",
+      "priority": 10,
+      "description": "Contact fields functional (phone, email, website)",
+      "steps": [
+        "Navigate to /onboarding Page 2",
+        "Enter phone number",
+        "Enter email address",
+        "Enter website URL (optional)",
+        "Verify phone format validation",
+        "Verify email format validation",
+        "Verify data saves to Supabase"
+      ],
+      "passes": false,
+      "blocked_by": ["onboarding-page2-layout"],
+      "notes": ""
+    },
+    {
+      "id": "onboarding-progress-2of2",
+      "category": "onboarding",
+      "priority": 11,
+      "description": "Progress indicator '2 of 2' visible on Page 2",
+      "steps": [
+        "Navigate to /onboarding Page 2",
+        "Verify progress bar shows 100% (Success Green)",
+        "Verify text shows '2 of 2'"
+      ],
+      "passes": false,
+      "blocked_by": ["onboarding-page2-layout"],
+      "notes": ""
+    },
+    {
+      "id": "onboarding-back-button",
+      "category": "onboarding",
+      "priority": 12,
+      "description": "Back button navigates to Page 1 preserving data",
+      "steps": [
+        "Navigate to /onboarding Page 2",
+        "Click 'Back'",
+        "Verify navigation to Page 1",
+        "Verify all Page 1 data still filled in"
+      ],
+      "passes": false,
+      "blocked_by": ["onboarding-page2-layout"],
+      "notes": ""
+    },
+    {
+      "id": "onboarding-complete-button",
+      "category": "onboarding",
+      "priority": 13,
+      "description": "Complete button navigates to questionnaire",
+      "steps": [
+        "Navigate to /onboarding Page 2",
+        "Fill all required fields",
+        "Click 'Complete Onboarding'",
+        "Verify navigation to /questionnaire",
+        "Verify vendor record marked as onboarding_complete in DB"
+      ],
+      "passes": false,
+      "blocked_by": ["onboarding-page2-layout", "onboarding-address-fields", "onboarding-contact-fields"],
+      "notes": ""
+    },
+    {
+      "id": "onboarding-clerk-integration",
+      "category": "onboarding",
+      "priority": 14,
+      "description": "Clerk authentication integrated with onboarding flow",
+      "steps": [
+        "Visit /onboarding without being logged in",
+        "Verify redirect to Clerk sign-in",
+        "Sign in with Clerk",
+        "Verify redirect back to /onboarding",
+        "Verify clerk_user_id saved to vendors table"
+      ],
+      "passes": false,
+      "blocked_by": ["onboarding-page1-layout"],
+      "notes": ""
+    },
+    {
+      "id": "onboarding-mobile-responsive",
+      "category": "onboarding",
+      "priority": 15,
+      "description": "Onboarding pages fully responsive on mobile",
+      "steps": [
+        "Open /onboarding on mobile viewport (375px)",
+        "Verify layout stacks vertically",
+        "Verify progress bar visible at top",
+        "Verify buttons full-width on mobile",
+        "Test all interactions on mobile"
+      ],
+      "passes": false,
+      "blocked_by": ["onboarding-page1-layout", "onboarding-page2-layout"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-layout",
+      "category": "questionnaire",
+      "priority": 16,
+      "description": "Questionnaire page layout with sidebar navigation",
+      "steps": [
+        "Navigate to /questionnaire",
+        "Verify left sidebar with section links",
+        "Verify main content area",
+        "Verify Trust Blue theme applied",
+        "Verify responsive on mobile (sidebar becomes dropdown)"
+      ],
+      "passes": false,
+      "blocked_by": ["onboarding-complete-button"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-section-core-safety",
+      "category": "questionnaire",
+      "priority": 17,
+      "description": "Core Safety section with 5 questions",
+      "steps": [
+        "Navigate to /questionnaire",
+        "Click 'Core Safety' in sidebar",
+        "Verify 5 questions displayed",
+        "Answer all questions",
+        "Verify answers save to questionnaire_responses table"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-layout"],
+      "notes": "Questions: EHS policy, incident tracking, hazard reporting, safety training, PPE program"
+    },
+    {
+      "id": "questionnaire-q1-ehs-policy",
+      "category": "questionnaire",
+      "priority": 18,
+      "description": "Q1: Do you have a written EHS policy? (Yes/No with file upload)",
+      "steps": [
+        "Navigate to Core Safety section",
+        "Select 'Yes'",
+        "Click 'Upload EHS Policy'",
+        "Upload PDF file",
+        "Verify file saves to Supabase Storage",
+        "Verify file_path saved to documents table"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-core-safety"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q2-incident-tracking",
+      "category": "questionnaire",
+      "priority": 19,
+      "description": "Q2: Do you track workplace incidents? (Yes/No)",
+      "steps": [
+        "Navigate to Core Safety section",
+        "Select 'Yes' or 'No'",
+        "Verify answer saves to questionnaire_responses",
+        "If Yes, verify additional field: 'Describe tracking system'"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-core-safety"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q3-hazard-reporting",
+      "category": "questionnaire",
+      "priority": 20,
+      "description": "Q3: Do you have a hazard reporting process? (Yes/No with description)",
+      "steps": [
+        "Navigate to Core Safety section",
+        "Select 'Yes'",
+        "Enter description in text area",
+        "Verify answer saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-core-safety"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q4-safety-training",
+      "category": "questionnaire",
+      "priority": 21,
+      "description": "Q4: Do you provide safety training? (Yes/No with frequency)",
+      "steps": [
+        "Navigate to Core Safety section",
+        "Select 'Yes'",
+        "Select frequency: Monthly/Quarterly/Annually",
+        "Verify answer saves with frequency"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-core-safety"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q5-ppe-program",
+      "category": "questionnaire",
+      "priority": 22,
+      "description": "Q5: Do you have a PPE program? (Yes/No with checklist)",
+      "steps": [
+        "Navigate to Core Safety section",
+        "Select 'Yes'",
+        "Check PPE types: Hard hats, Safety glasses, Gloves, Steel-toed boots",
+        "Verify answer saves with PPE types array"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-core-safety"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-section-insurance",
+      "category": "questionnaire",
+      "priority": 23,
+      "description": "Insurance section with 5 questions",
+      "steps": [
+        "Navigate to /questionnaire",
+        "Click 'Insurance' in sidebar",
+        "Verify 5 questions displayed",
+        "Answer all questions",
+        "Verify answers save"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-layout"],
+      "notes": "Questions: General liability, workers comp, auto insurance, umbrella, certificates"
+    },
+    {
+      "id": "questionnaire-q6-general-liability",
+      "category": "questionnaire",
+      "priority": 24,
+      "description": "Q6: Do you have general liability insurance? (Yes/No with coverage amount)",
+      "steps": [
+        "Navigate to Insurance section",
+        "Select 'Yes'",
+        "Enter coverage amount (e.g., $1,000,000)",
+        "Upload certificate of insurance",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-insurance"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q7-workers-comp",
+      "category": "questionnaire",
+      "priority": 25,
+      "description": "Q7: Do you have workers compensation insurance? (Yes/No with details)",
+      "steps": [
+        "Navigate to Insurance section",
+        "Select 'Yes'",
+        "Enter policy number",
+        "Enter expiration date",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-insurance"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q8-auto-insurance",
+      "category": "questionnaire",
+      "priority": 26,
+      "description": "Q8: Do you have commercial auto insurance? (Yes/No)",
+      "steps": [
+        "Navigate to Insurance section",
+        "Select 'Yes' or 'No'",
+        "If Yes, enter coverage details",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-insurance"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q9-umbrella-insurance",
+      "category": "questionnaire",
+      "priority": 27,
+      "description": "Q9: Do you have umbrella/excess liability insurance? (Yes/No)",
+      "steps": [
+        "Navigate to Insurance section",
+        "Select 'Yes' or 'No'",
+        "If Yes, enter coverage amount",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-insurance"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q10-insurance-certificates",
+      "category": "questionnaire",
+      "priority": 28,
+      "description": "Q10: Upload all insurance certificates (File upload)",
+      "steps": [
+        "Navigate to Insurance section",
+        "Click 'Upload Certificates'",
+        "Upload multiple PDFs",
+        "Verify all files save to Supabase Storage",
+        "Verify files listed in documents table"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-insurance"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-section-metrics",
+      "category": "questionnaire",
+      "priority": 29,
+      "description": "Safety Metrics section with 5 questions",
+      "steps": [
+        "Navigate to /questionnaire",
+        "Click 'Safety Metrics' in sidebar",
+        "Verify 5 questions displayed",
+        "Answer all questions",
+        "Verify answers save"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-layout"],
+      "notes": "Questions: TRIR, DART, EMR, lost time incidents, near misses"
+    },
+    {
+      "id": "questionnaire-q11-trir",
+      "category": "questionnaire",
+      "priority": 30,
+      "description": "Q11: What is your TRIR (Total Recordable Incident Rate)? (Number input)",
+      "steps": [
+        "Navigate to Safety Metrics section",
+        "Enter TRIR value (e.g., 2.5)",
+        "Verify decimal validation",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-metrics"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q12-dart",
+      "category": "questionnaire",
+      "priority": 31,
+      "description": "Q12: What is your DART rate? (Number input)",
+      "steps": [
+        "Navigate to Safety Metrics section",
+        "Enter DART value",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-metrics"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q13-emr",
+      "category": "questionnaire",
+      "priority": 32,
+      "description": "Q13: What is your EMR (Experience Modification Rate)? (Number input)",
+      "steps": [
+        "Navigate to Safety Metrics section",
+        "Enter EMR value (e.g., 0.85)",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-metrics"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q14-lost-time-incidents",
+      "category": "questionnaire",
+      "priority": 33,
+      "description": "Q14: How many lost-time incidents in past year? (Number input)",
+      "steps": [
+        "Navigate to Safety Metrics section",
+        "Enter number of incidents",
+        "Verify integer validation",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-metrics"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q15-near-misses",
+      "category": "questionnaire",
+      "priority": 34,
+      "description": "Q15: Do you track near-miss incidents? (Yes/No with count)",
+      "steps": [
+        "Navigate to Safety Metrics section",
+        "Select 'Yes'",
+        "Enter count of near-misses in past year",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-metrics"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-section-relationships",
+      "category": "questionnaire",
+      "priority": 35,
+      "description": "Business Relationships section with 5 questions",
+      "steps": [
+        "Navigate to /questionnaire",
+        "Click 'Business Relationships' in sidebar",
+        "Verify 5 questions displayed",
+        "Answer all questions",
+        "Verify answers save"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-layout"],
+      "notes": "Questions: Years in business, current customers, references, certifications, union affiliation"
+    },
+    {
+      "id": "questionnaire-q16-years-in-business",
+      "category": "questionnaire",
+      "priority": 36,
+      "description": "Q16: How many years in business? (Number input)",
+      "steps": [
+        "Navigate to Business Relationships section",
+        "Enter years in business",
+        "Verify integer validation",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-relationships"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q17-current-customers",
+      "category": "questionnaire",
+      "priority": 37,
+      "description": "Q17: List 3 current customers (Text area)",
+      "steps": [
+        "Navigate to Business Relationships section",
+        "Enter customer names (one per line)",
+        "Verify data saves as array"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-relationships"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q18-references",
+      "category": "questionnaire",
+      "priority": 38,
+      "description": "Q18: Provide 3 professional references (Contact info)",
+      "steps": [
+        "Navigate to Business Relationships section",
+        "Enter 3 references with name, company, phone, email",
+        "Verify data saves as jsonb array"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-relationships"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q19-certifications",
+      "category": "questionnaire",
+      "priority": 39,
+      "description": "Q19: List any industry certifications (Checklist + upload)",
+      "steps": [
+        "Navigate to Business Relationships section",
+        "Check certifications: OSHA 30-hour, NFPA 70E, etc.",
+        "Upload certification documents",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-relationships"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q20-union-affiliation",
+      "category": "questionnaire",
+      "priority": 40,
+      "description": "Q20: Are you a union contractor? (Yes/No with local number)",
+      "steps": [
+        "Navigate to Business Relationships section",
+        "Select 'Yes' or 'No'",
+        "If Yes, enter union local number",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-relationships"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-section-electrical",
+      "category": "questionnaire",
+      "priority": 41,
+      "description": "Electrical Work section (conditional on work type)",
+      "steps": [
+        "Onboard with 'Electrical Work' selected",
+        "Navigate to /questionnaire",
+        "Verify 'Electrical Work' section appears in sidebar",
+        "Click section and verify questions load"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-layout", "onboarding-work-types"],
+      "notes": "Only shows if 'electrical' in work_types array"
+    },
+    {
+      "id": "questionnaire-q21-electrical-license",
+      "category": "questionnaire",
+      "priority": 42,
+      "description": "Q21: Do you have electrical contractor license? (Yes/No with number)",
+      "steps": [
+        "Navigate to Electrical Work section",
+        "Select 'Yes'",
+        "Enter license number",
+        "Upload license document",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-electrical"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q22-nfpa-70e",
+      "category": "questionnaire",
+      "priority": 43,
+      "description": "Q22: Do you follow NFPA 70E standards? (Yes/No)",
+      "steps": [
+        "Navigate to Electrical Work section",
+        "Select 'Yes' or 'No'",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-electrical"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q23-arc-flash",
+      "category": "questionnaire",
+      "priority": 44,
+      "description": "Q23: Do you perform arc flash studies? (Yes/No)",
+      "steps": [
+        "Navigate to Electrical Work section",
+        "Select 'Yes' or 'No'",
+        "If Yes, upload sample study",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-electrical"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q24-qualified-electricians",
+      "category": "questionnaire",
+      "priority": 45,
+      "description": "Q24: How many qualified electricians on staff? (Number input)",
+      "steps": [
+        "Navigate to Electrical Work section",
+        "Enter number of electricians",
+        "Verify integer validation",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-electrical"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q25-electrical-ppe",
+      "category": "questionnaire",
+      "priority": 46,
+      "description": "Q25: Do you provide arc-rated PPE? (Yes/No with details)",
+      "steps": [
+        "Navigate to Electrical Work section",
+        "Select 'Yes'",
+        "Check PPE types: Arc-rated shirts, pants, face shields",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-electrical"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-section-heights",
+      "category": "questionnaire",
+      "priority": 47,
+      "description": "Work at Heights section (conditional on work type)",
+      "steps": [
+        "Onboard with 'Work at Heights' selected",
+        "Navigate to /questionnaire",
+        "Verify 'Work at Heights' section appears",
+        "Click section and verify questions load"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-layout", "onboarding-work-types"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q26-fall-protection",
+      "category": "questionnaire",
+      "priority": 48,
+      "description": "Q26: Do you have a fall protection program? (Yes/No with upload)",
+      "steps": [
+        "Navigate to Work at Heights section",
+        "Select 'Yes'",
+        "Upload fall protection plan",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-heights"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q27-harness-inspection",
+      "category": "questionnaire",
+      "priority": 49,
+      "description": "Q27: Do you inspect harnesses before each use? (Yes/No)",
+      "steps": [
+        "Navigate to Work at Heights section",
+        "Select 'Yes' or 'No'",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-heights"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q28-scaffold-training",
+      "category": "questionnaire",
+      "priority": 50,
+      "description": "Q28: Do you provide scaffold training? (Yes/No with frequency)",
+      "steps": [
+        "Navigate to Work at Heights section",
+        "Select 'Yes'",
+        "Select training frequency",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-heights"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q29-ladder-safety",
+      "category": "questionnaire",
+      "priority": 51,
+      "description": "Q29: Do you have a ladder safety program? (Yes/No)",
+      "steps": [
+        "Navigate to Work at Heights section",
+        "Select 'Yes' or 'No'",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-heights"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q30-rescue-plan",
+      "category": "questionnaire",
+      "priority": 52,
+      "description": "Q30: Do you have a rescue plan for falls? (Yes/No with upload)",
+      "steps": [
+        "Navigate to Work at Heights section",
+        "Select 'Yes'",
+        "Upload rescue plan document",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-heights"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-section-loto",
+      "category": "questionnaire",
+      "priority": 53,
+      "description": "Lockout/Tagout section (conditional on work type)",
+      "steps": [
+        "Onboard with 'Lockout/Tagout' selected",
+        "Navigate to /questionnaire",
+        "Verify 'Lockout/Tagout' section appears",
+        "Click section and verify questions load"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-layout", "onboarding-work-types"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q31-loto-program",
+      "category": "questionnaire",
+      "priority": 54,
+      "description": "Q31: Do you have a written LOTO program? (Yes/No with upload)",
+      "steps": [
+        "Navigate to Lockout/Tagout section",
+        "Select 'Yes'",
+        "Upload LOTO program document",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-loto"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q32-loto-training",
+      "category": "questionnaire",
+      "priority": 55,
+      "description": "Q32: Do you provide LOTO training? (Yes/No with frequency)",
+      "steps": [
+        "Navigate to Lockout/Tagout section",
+        "Select 'Yes'",
+        "Select training frequency: Annually/As needed",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-loto"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q33-loto-devices",
+      "category": "questionnaire",
+      "priority": 56,
+      "description": "Q33: Do you provide LOTO devices? (Yes/No with types)",
+      "steps": [
+        "Navigate to Lockout/Tagout section",
+        "Select 'Yes'",
+        "Check device types: Padlocks, tags, valve covers",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-loto"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q34-loto-procedures",
+      "category": "questionnaire",
+      "priority": 57,
+      "description": "Q34: Do you document equipment-specific LOTO procedures? (Yes/No)",
+      "steps": [
+        "Navigate to Lockout/Tagout section",
+        "Select 'Yes' or 'No'",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-loto"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q35-loto-audits",
+      "category": "questionnaire",
+      "priority": 58,
+      "description": "Q35: Do you audit LOTO compliance? (Yes/No with frequency)",
+      "steps": [
+        "Navigate to Lockout/Tagout section",
+        "Select 'Yes'",
+        "Select audit frequency",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-loto"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-section-equipment",
+      "category": "questionnaire",
+      "priority": 59,
+      "description": "Equipment Installation section (conditional on work type)",
+      "steps": [
+        "Onboard with 'Equipment Installation' selected",
+        "Navigate to /questionnaire",
+        "Verify 'Equipment Installation' section appears",
+        "Click section and verify questions load"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-layout", "onboarding-work-types"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q36-equipment-types",
+      "category": "questionnaire",
+      "priority": 60,
+      "description": "Q36: What types of equipment do you install? (Checklist)",
+      "steps": [
+        "Navigate to Equipment Installation section",
+        "Check equipment types: HVAC, Boilers, Compressors, Pumps, etc.",
+        "Verify data saves as array"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-equipment"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q37-rigging-certification",
+      "category": "questionnaire",
+      "priority": 61,
+      "description": "Q37: Do you have certified riggers? (Yes/No with count)",
+      "steps": [
+        "Navigate to Equipment Installation section",
+        "Select 'Yes'",
+        "Enter number of certified riggers",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-equipment"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q38-crane-safety",
+      "category": "questionnaire",
+      "priority": 62,
+      "description": "Q38: Do you use cranes for installations? (Yes/No with details)",
+      "steps": [
+        "Navigate to Equipment Installation section",
+        "Select 'Yes'",
+        "Enter crane operator certifications",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-equipment"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q39-lift-plan",
+      "category": "questionnaire",
+      "priority": 63,
+      "description": "Q39: Do you create lift plans? (Yes/No with upload)",
+      "steps": [
+        "Navigate to Equipment Installation section",
+        "Select 'Yes'",
+        "Upload sample lift plan",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-equipment"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-q40-equipment-inspection",
+      "category": "questionnaire",
+      "priority": 64,
+      "description": "Q40: Do you inspect equipment before use? (Yes/No with frequency)",
+      "steps": [
+        "Navigate to Equipment Installation section",
+        "Select 'Yes'",
+        "Select inspection frequency",
+        "Verify data saves"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-section-equipment"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-progress-indicator",
+      "category": "questionnaire",
+      "priority": 65,
+      "description": "Questionnaire progress indicator shows completion percentage",
+      "steps": [
+        "Navigate to /questionnaire",
+        "Answer 10 of 40 questions",
+        "Verify progress shows 25%",
+        "Answer all 40 questions",
+        "Verify progress shows 100%"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-layout"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-save-indicator",
+      "category": "questionnaire",
+      "priority": 66,
+      "description": "Auto-save indicator appears when saving answers",
+      "steps": [
+        "Navigate to /questionnaire",
+        "Answer a question",
+        "Verify 'Saving...' indicator appears",
+        "Verify 'Saved' checkmark appears after save"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-layout"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-validation",
+      "category": "questionnaire",
+      "priority": 67,
+      "description": "Required questions show validation errors",
+      "steps": [
+        "Navigate to /questionnaire",
+        "Leave required question blank",
+        "Try to navigate to next section",
+        "Verify validation error appears",
+        "Verify error styled with Danger Red"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-layout"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-complete-button",
+      "category": "questionnaire",
+      "priority": 68,
+      "description": "Complete questionnaire button navigates to dashboard",
+      "steps": [
+        "Navigate to /questionnaire",
+        "Answer all required questions",
+        "Click 'Complete Questionnaire'",
+        "Verify navigation to /dashboard",
+        "Verify questionnaire_complete flag set in DB"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-layout"],
+      "notes": ""
+    },
+    {
+      "id": "questionnaire-mobile-responsive",
+      "category": "questionnaire",
+      "priority": 69,
+      "description": "Questionnaire fully responsive on mobile",
+      "steps": [
+        "Open /questionnaire on mobile (375px)",
+        "Verify sidebar becomes dropdown menu",
+        "Verify questions stack vertically",
+        "Verify file upload works on mobile"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-layout"],
+      "notes": ""
+    },
+    {
+      "id": "dashboard-layout",
+      "category": "dashboard",
+      "priority": 70,
+      "description": "Dashboard layout with sidebar navigation",
+      "steps": [
+        "Navigate to /dashboard",
+        "Verify left sidebar with links",
+        "Verify main content area",
+        "Verify Trust Blue theme applied",
+        "Verify responsive layout"
+      ],
+      "passes": false,
+      "blocked_by": ["questionnaire-complete-button"],
+      "notes": ""
+    },
+    {
+      "id": "dashboard-score-card",
+      "category": "dashboard",
+      "priority": 71,
+      "description": "Compliance score card displays overall score",
+      "steps": [
+        "Navigate to /dashboard",
+        "Verify large score display (e.g., 85/100)",
+        "Verify score styled with Success Green if >70",
+        "Verify score styled with Warning Amber if 50-70",
+        "Verify score styled with Danger Red if <50"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-layout"],
+      "notes": ""
+    },
+    {
+      "id": "dashboard-score-calculation",
+      "category": "dashboard",
+      "priority": 72,
+      "description": "Score calculation algorithm implemented",
+      "steps": [
+        "Complete questionnaire with all 'Yes' answers",
+        "Navigate to /dashboard",
+        "Verify score is 100",
+        "Answer 50% questions with 'No'",
+        "Verify score is ~50"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-score-card"],
+      "notes": "Algorithm: (yes_answers / total_questions) * 100, with weighted sections"
+    },
+    {
+      "id": "dashboard-section-breakdown",
+      "category": "dashboard",
+      "priority": 73,
+      "description": "Section breakdown shows scores by category",
+      "steps": [
+        "Navigate to /dashboard",
+        "Verify section cards displayed",
+        "Verify each section shows score (e.g., Core Safety: 90/100)",
+        "Verify color coding by score"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-layout"],
+      "notes": "Sections: Core Safety, Insurance, Metrics, Relationships, Work Type"
+    },
+    {
+      "id": "dashboard-action-items",
+      "category": "dashboard",
+      "priority": 74,
+      "description": "Action items list shows incomplete/low-score items",
+      "steps": [
+        "Navigate to /dashboard",
+        "Verify 'Action Items' section",
+        "Verify list of questions answered 'No'",
+        "Verify list of missing document uploads",
+        "Click action item and verify navigation to question"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-layout"],
+      "notes": ""
+    },
+    {
+      "id": "dashboard-document-list",
+      "category": "dashboard",
+      "priority": 75,
+      "description": "Uploaded documents list with download links",
+      "steps": [
+        "Navigate to /dashboard",
+        "Click 'Documents' tab",
+        "Verify all uploaded documents listed",
+        "Click document name and verify download",
+        "Verify documents organized by category"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-layout"],
+      "notes": ""
+    },
+    {
+      "id": "dashboard-customer-management",
+      "category": "dashboard",
+      "priority": 76,
+      "description": "Customer management section for PDF exports",
+      "steps": [
+        "Navigate to /dashboard",
+        "Click 'Customers' tab",
+        "Verify customer list (empty initially)",
+        "Click 'Add Customer'",
+        "Verify modal opens"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-layout"],
+      "notes": ""
+    },
+    {
+      "id": "dashboard-add-customer",
+      "category": "dashboard",
+      "priority": 77,
+      "description": "Add customer modal with form",
+      "steps": [
+        "Navigate to /dashboard Customers tab",
+        "Click 'Add Customer'",
+        "Enter customer name",
+        "Click 'Save'",
+        "Verify customer appears in list",
+        "Verify customer saved to customers table"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-customer-management"],
+      "notes": ""
+    },
+    {
+      "id": "dashboard-export-pdf-button",
+      "category": "dashboard",
+      "priority": 78,
+      "description": "Export PDF button appears for each customer",
+      "steps": [
+        "Navigate to /dashboard Customers tab",
+        "Verify 'Export PDF' button next to each customer",
+        "Verify button styled with Trust Blue",
+        "Click button and verify PDF generation starts"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-add-customer"],
+      "notes": ""
+    },
+    {
+      "id": "dashboard-profile-link",
+      "category": "dashboard",
+      "priority": 79,
+      "description": "Link to edit vendor profile",
+      "steps": [
+        "Navigate to /dashboard",
+        "Click 'Edit Profile' link",
+        "Verify navigation to /onboarding with data pre-filled"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-layout"],
+      "notes": ""
+    },
+    {
+      "id": "dashboard-questionnaire-link",
+      "category": "dashboard",
+      "priority": 80,
+      "description": "Link to edit questionnaire responses",
+      "steps": [
+        "Navigate to /dashboard",
+        "Click 'Edit Questionnaire' link",
+        "Verify navigation to /questionnaire with answers pre-filled"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-layout"],
+      "notes": ""
+    },
+    {
+      "id": "dashboard-mobile-responsive",
+      "category": "dashboard",
+      "priority": 81,
+      "description": "Dashboard fully responsive on mobile",
+      "steps": [
+        "Open /dashboard on mobile (375px)",
+        "Verify sidebar becomes hamburger menu",
+        "Verify score card stacks vertically",
+        "Verify section cards stack",
+        "Verify customer list scrolls horizontally"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-layout"],
+      "notes": ""
+    },
+    {
+      "id": "pdf-export-template",
+      "category": "pdf",
+      "priority": 82,
+      "description": "PDF template created with professional design",
+      "steps": [
+        "Create PDF template with Compliance Clarity colors",
+        "Include vendor logo placeholder",
+        "Include customer name on cover page",
+        "Include table of contents",
+        "Include footer with page numbers"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "pdf-cover-page",
+      "category": "pdf",
+      "priority": 83,
+      "description": "PDF cover page with vendor and customer info",
+      "steps": [
+        "Generate PDF",
+        "Verify cover page shows vendor company name",
+        "Verify cover page shows customer name",
+        "Verify cover page shows export date",
+        "Verify cover page shows compliance score"
+      ],
+      "passes": false,
+      "blocked_by": ["pdf-export-template"],
+      "notes": ""
+    },
+    {
+      "id": "pdf-company-profile",
+      "category": "pdf",
+      "priority": 84,
+      "description": "PDF includes company profile section",
+      "steps": [
+        "Generate PDF",
+        "Verify company profile page includes:",
+        "- Company name, address, contact",
+        "- Employee count",
+        "- Years in business",
+        "- Work types"
+      ],
+      "passes": false,
+      "blocked_by": ["pdf-export-template"],
+      "notes": ""
+    },
+    {
+      "id": "pdf-score-summary",
+      "category": "pdf",
+      "priority": 85,
+      "description": "PDF includes score summary with breakdown",
+      "steps": [
+        "Generate PDF",
+        "Verify score summary page includes:",
+        "- Overall score (large, color-coded)",
+        "- Section breakdown with individual scores",
+        "- Chart/graph visualization"
+      ],
+      "passes": false,
+      "blocked_by": ["pdf-export-template"],
+      "notes": ""
+    },
+    {
+      "id": "pdf-questionnaire-responses",
+      "category": "pdf",
+      "priority": 86,
+      "description": "PDF includes all questionnaire responses",
+      "steps": [
+        "Generate PDF",
+        "Verify all questions and answers included",
+        "Verify organized by section",
+        "Verify 'Yes' answers styled with Success Green",
+        "Verify 'No' answers styled with Danger Red"
+      ],
+      "passes": false,
+      "blocked_by": ["pdf-export-template"],
+      "notes": ""
+    },
+    {
+      "id": "pdf-document-attachments",
+      "category": "pdf",
+      "priority": 87,
+      "description": "PDF includes uploaded documents as appendix",
+      "steps": [
+        "Generate PDF",
+        "Verify appendix section lists all uploaded documents",
+        "Verify document names and categories",
+        "Note: Actual file attachments handled separately"
+      ],
+      "passes": false,
+      "blocked_by": ["pdf-export-template"],
+      "notes": ""
+    },
+    {
+      "id": "pdf-puppeteer-setup",
+      "category": "pdf",
+      "priority": 88,
+      "description": "Puppeteer configured for PDF generation",
+      "steps": [
+        "Install puppeteer package",
+        "Create API route /api/pdf/generate",
+        "Test basic PDF generation",
+        "Verify PDF downloads in browser"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "pdf-generation-api",
+      "category": "pdf",
+      "priority": 89,
+      "description": "API endpoint generates PDF from vendor data",
+      "steps": [
+        "Call /api/pdf/generate?customerId=xxx",
+        "Verify PDF generated with vendor data",
+        "Verify PDF includes customer name",
+        "Verify PDF downloads correctly"
+      ],
+      "passes": false,
+      "blocked_by": ["pdf-puppeteer-setup", "pdf-export-template"],
+      "notes": ""
+    },
+    {
+      "id": "pdf-storage-supabase",
+      "category": "pdf",
+      "priority": 90,
+      "description": "Generated PDFs saved to Supabase Storage",
+      "steps": [
+        "Generate PDF",
+        "Verify PDF uploaded to Supabase Storage bucket",
+        "Verify file path saved to exports table",
+        "Verify export record created with metadata"
+      ],
+      "passes": false,
+      "blocked_by": ["pdf-generation-api"],
+      "notes": ""
+    },
+    {
+      "id": "pdf-export-history",
+      "category": "pdf",
+      "priority": 91,
+      "description": "Export history shown for each customer",
+      "steps": [
+        "Navigate to /dashboard Customers tab",
+        "Click customer name",
+        "Verify export history list",
+        "Verify each export shows: Date, score, download link"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-customer-management", "pdf-storage-supabase"],
+      "notes": ""
+    },
+    {
+      "id": "pdf-re-export",
+      "category": "pdf",
+      "priority": 92,
+      "description": "Re-export PDF with updated data",
+      "steps": [
+        "Generate PDF for customer",
+        "Update questionnaire answers",
+        "Generate PDF again for same customer",
+        "Verify new PDF reflects updated answers",
+        "Verify both PDFs in export history"
+      ],
+      "passes": false,
+      "blocked_by": ["pdf-storage-supabase"],
+      "notes": ""
+    },
+    {
+      "id": "pdf-loading-state",
+      "category": "pdf",
+      "priority": 93,
+      "description": "Loading indicator during PDF generation",
+      "steps": [
+        "Click 'Export PDF'",
+        "Verify loading spinner appears",
+        "Verify button disabled during generation",
+        "Verify success message after completion"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-export-pdf-button"],
+      "notes": ""
+    },
+    {
+      "id": "pdf-error-handling",
+      "category": "pdf",
+      "priority": 94,
+      "description": "Error handling for PDF generation failures",
+      "steps": [
+        "Simulate PDF generation error",
+        "Verify error message displayed",
+        "Verify error styled with Danger Red",
+        "Verify button re-enabled for retry"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-export-pdf-button"],
+      "notes": ""
+    },
+    {
+      "id": "clerk-signin-page",
+      "category": "auth",
+      "priority": 95,
+      "description": "Clerk sign-in page configured",
+      "steps": [
+        "Navigate to /sign-in",
+        "Verify Clerk sign-in component loads",
+        "Sign in with email/password",
+        "Verify redirect to /dashboard after sign-in"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "clerk-signup-page",
+      "category": "auth",
+      "priority": 96,
+      "description": "Clerk sign-up page configured",
+      "steps": [
+        "Navigate to /sign-up",
+        "Verify Clerk sign-up component loads",
+        "Sign up with email/password",
+        "Verify redirect to /onboarding after sign-up"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "clerk-protected-routes",
+      "category": "auth",
+      "priority": 97,
+      "description": "Protected routes require authentication",
+      "steps": [
+        "Sign out",
+        "Try to visit /onboarding",
+        "Verify redirect to /sign-in",
+        "Try to visit /questionnaire",
+        "Verify redirect to /sign-in",
+        "Try to visit /dashboard",
+        "Verify redirect to /sign-in"
+      ],
+      "passes": false,
+      "blocked_by": ["clerk-signin-page"],
+      "notes": ""
+    },
+    {
+      "id": "clerk-user-creation",
+      "category": "auth",
+      "priority": 98,
+      "description": "Vendor record created on first sign-up",
+      "steps": [
+        "Sign up new user",
+        "Verify vendor record created in vendors table",
+        "Verify clerk_user_id matches Clerk user ID",
+        "Verify redirect to /onboarding"
+      ],
+      "passes": false,
+      "blocked_by": ["clerk-signup-page"],
+      "notes": ""
+    },
+    {
+      "id": "clerk-user-profile",
+      "category": "auth",
+      "priority": 99,
+      "description": "Clerk user profile accessible",
+      "steps": [
+        "Sign in",
+        "Navigate to /user-profile",
+        "Verify Clerk profile component loads",
+        "Update email",
+        "Verify email updated in Clerk"
+      ],
+      "passes": false,
+      "blocked_by": ["clerk-signin-page"],
+      "notes": ""
+    },
+    {
+      "id": "landing-page-hero",
+      "category": "landing",
+      "priority": 100,
+      "description": "Landing page hero section",
+      "steps": [
+        "Navigate to /",
+        "Verify hero headline visible",
+        "Verify subheadline visible",
+        "Verify CTA button 'Get Started'",
+        "Click CTA and verify redirect to /sign-up"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "landing-page-features",
+      "category": "landing",
+      "priority": 101,
+      "description": "Landing page features section",
+      "steps": [
+        "Navigate to /",
+        "Scroll to features section",
+        "Verify 3 feature cards displayed",
+        "Verify Trust Blue icons",
+        "Verify responsive layout"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": "Features: 30-min setup, unlimited exports, compliance tracking"
+    },
+    {
+      "id": "landing-page-how-it-works",
+      "category": "landing",
+      "priority": 102,
+      "description": "Landing page how it works section",
+      "steps": [
+        "Navigate to /",
+        "Scroll to how it works section",
+        "Verify 3-step process displayed",
+        "Verify numbered steps with Success Green",
+        "Verify responsive layout"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": "Steps: 1. Onboard, 2. Complete questionnaire, 3. Export PDFs"
+    },
+    {
+      "id": "landing-page-testimonials",
+      "category": "landing",
+      "priority": 103,
+      "description": "Landing page testimonials section",
+      "steps": [
+        "Navigate to /",
+        "Scroll to testimonials section",
+        "Verify 3 testimonial cards",
+        "Verify customer names and companies",
+        "Verify responsive carousel on mobile"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "landing-page-cta-bottom",
+      "category": "landing",
+      "priority": 104,
+      "description": "Landing page bottom CTA section",
+      "steps": [
+        "Navigate to /",
+        "Scroll to bottom",
+        "Verify CTA section with headline",
+        "Verify 'Start Free Trial' button",
+        "Click button and verify redirect to /sign-up"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "landing-page-responsive",
+      "category": "landing",
+      "priority": 105,
+      "description": "Landing page fully responsive",
+      "steps": [
+        "Open / on mobile (375px)",
+        "Verify hero stacks vertically",
+        "Verify features stack",
+        "Verify how it works stacks",
+        "Verify testimonials carousel works"
+      ],
+      "passes": false,
+      "blocked_by": ["landing-page-hero"],
+      "notes": ""
+    },
+    {
+      "id": "navigation-header",
+      "category": "navigation",
+      "priority": 106,
+      "description": "Header navigation component",
+      "steps": [
+        "Navigate to any page",
+        "Verify header with logo",
+        "Verify navigation links: Home, How It Works, Pricing",
+        "If logged in, verify user menu",
+        "If logged out, verify Sign In / Sign Up links"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "navigation-mobile-menu",
+      "category": "navigation",
+      "priority": 107,
+      "description": "Mobile hamburger menu",
+      "steps": [
+        "Open any page on mobile (375px)",
+        "Verify hamburger icon visible",
+        "Click hamburger",
+        "Verify menu slides in from left",
+        "Verify all nav links visible",
+        "Click link and verify navigation"
+      ],
+      "passes": false,
+      "blocked_by": ["navigation-header"],
+      "notes": ""
+    },
+    {
+      "id": "navigation-footer",
+      "category": "navigation",
+      "priority": 108,
+      "description": "Footer component",
+      "steps": [
+        "Scroll to bottom of any page",
+        "Verify footer with logo",
+        "Verify links: Privacy, Terms, Contact",
+        "Verify copyright text",
+        "Verify social media icons (optional)"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "file-upload-component",
+      "category": "components",
+      "priority": 109,
+      "description": "Reusable file upload component",
+      "steps": [
+        "Test file upload in questionnaire",
+        "Verify drag-and-drop works",
+        "Verify click to browse works",
+        "Verify file type validation (PDFs only)",
+        "Verify file size validation (max 10MB)"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "file-upload-progress",
+      "category": "components",
+      "priority": 110,
+      "description": "File upload progress indicator",
+      "steps": [
+        "Upload large file (5MB+)",
+        "Verify progress bar appears",
+        "Verify percentage shown",
+        "Verify success checkmark after upload"
+      ],
+      "passes": false,
+      "blocked_by": ["file-upload-component"],
+      "notes": ""
+    },
+    {
+      "id": "file-upload-error-handling",
+      "category": "components",
+      "priority": 111,
+      "description": "File upload error handling",
+      "steps": [
+        "Upload file >10MB",
+        "Verify error message",
+        "Upload non-PDF file",
+        "Verify error message",
+        "Simulate network error",
+        "Verify error message"
+      ],
+      "passes": false,
+      "blocked_by": ["file-upload-component"],
+      "notes": ""
+    },
+    {
+      "id": "supabase-storage-bucket",
+      "category": "infrastructure",
+      "priority": 112,
+      "description": "Supabase Storage bucket configured",
+      "steps": [
+        "Create 'documents' bucket in Supabase",
+        "Set bucket to private",
+        "Configure RLS policies",
+        "Test upload via API"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "supabase-rls-policies",
+      "category": "infrastructure",
+      "priority": 113,
+      "description": "Row Level Security policies enforce data isolation",
+      "steps": [
+        "Sign in as User A",
+        "Create vendor record",
+        "Sign in as User B",
+        "Try to query User A's vendor record",
+        "Verify access denied",
+        "Verify User B can only see their own data"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "env-variables-configured",
+      "category": "infrastructure",
+      "priority": 114,
+      "description": "Environment variables configured",
+      "steps": [
+        "Verify .env.local exists",
+        "Verify all required variables set:",
+        "- NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY",
+        "- CLERK_SECRET_KEY",
+        "- NEXT_PUBLIC_SUPABASE_URL",
+        "- NEXT_PUBLIC_SUPABASE_ANON_KEY",
+        "- SUPABASE_SERVICE_ROLE_KEY"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "vercel-deployment-config",
+      "category": "deployment",
+      "priority": 115,
+      "description": "Vercel deployment configured",
+      "steps": [
+        "Create Vercel project",
+        "Connect to GitHub repo",
+        "Configure environment variables in Vercel",
+        "Enable automatic deployments on push"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "vercel-preview-deployments",
+      "category": "deployment",
+      "priority": 116,
+      "description": "Preview deployments work for PRs",
+      "steps": [
+        "Create feature branch",
+        "Push to GitHub",
+        "Create pull request",
+        "Verify Vercel preview deployment created",
+        "Test preview URL"
+      ],
+      "passes": false,
+      "blocked_by": ["vercel-deployment-config"],
+      "notes": ""
+    },
+    {
+      "id": "vercel-production-deployment",
+      "category": "deployment",
+      "priority": 117,
+      "description": "Production deployment to custom domain",
+      "steps": [
+        "Configure custom domain in Vercel",
+        "Merge PR to main",
+        "Verify production deployment",
+        "Visit custom domain",
+        "Verify site loads correctly"
+      ],
+      "passes": false,
+      "blocked_by": ["vercel-deployment-config"],
+      "notes": ""
+    },
+    {
+      "id": "error-page-404",
+      "category": "polish",
+      "priority": 118,
+      "description": "Custom 404 error page",
+      "steps": [
+        "Navigate to /nonexistent-page",
+        "Verify custom 404 page loads",
+        "Verify styled with Compliance Clarity theme",
+        "Verify 'Go Home' button",
+        "Click button and verify redirect to /"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "error-page-500",
+      "category": "polish",
+      "priority": 119,
+      "description": "Custom 500 error page",
+      "steps": [
+        "Simulate server error",
+        "Verify custom 500 page loads",
+        "Verify error message",
+        "Verify 'Try Again' button"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "loading-states",
+      "category": "polish",
+      "priority": 120,
+      "description": "Loading states for all async operations",
+      "steps": [
+        "Test all pages with slow network (throttle)",
+        "Verify loading spinners appear",
+        "Verify skeleton screens on dashboard",
+        "Verify no layout shift during load"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "toast-notifications",
+      "category": "polish",
+      "priority": 121,
+      "description": "Toast notifications for user feedback",
+      "steps": [
+        "Complete an action (e.g., save answer)",
+        "Verify success toast appears",
+        "Verify toast auto-dismisses after 3 seconds",
+        "Trigger error (e.g., network fail)",
+        "Verify error toast appears"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "form-validation-messages",
+      "category": "polish",
+      "priority": 122,
+      "description": "Consistent form validation messages",
+      "steps": [
+        "Test all forms",
+        "Verify required field messages consistent",
+        "Verify email validation message",
+        "Verify phone validation message",
+        "Verify all styled with Danger Red"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "accessibility-keyboard-nav",
+      "category": "accessibility",
+      "priority": 123,
+      "description": "Keyboard navigation works site-wide",
+      "steps": [
+        "Navigate all pages using only keyboard",
+        "Verify Tab moves through all interactive elements",
+        "Verify Enter activates buttons/links",
+        "Verify focus indicators visible (Trust Blue outline)"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "accessibility-screen-reader",
+      "category": "accessibility",
+      "priority": 124,
+      "description": "Screen reader compatibility",
+      "steps": [
+        "Test with VoiceOver (Mac) or NVDA (Windows)",
+        "Verify all images have alt text",
+        "Verify form labels properly associated",
+        "Verify ARIA labels on interactive elements"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "accessibility-color-contrast",
+      "category": "accessibility",
+      "priority": 125,
+      "description": "Color contrast meets WCAG AA standards",
+      "steps": [
+        "Run accessibility audit in Chrome DevTools",
+        "Verify all text has sufficient contrast",
+        "Fix any contrast issues",
+        "Re-run audit and verify no contrast errors"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "seo-meta-tags",
+      "category": "seo",
+      "priority": 126,
+      "description": "SEO meta tags on all pages",
+      "steps": [
+        "View source for /",
+        "Verify title tag",
+        "Verify description meta tag",
+        "Verify og:image meta tag",
+        "Repeat for all pages"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "seo-sitemap",
+      "category": "seo",
+      "priority": 127,
+      "description": "Sitemap.xml generated",
+      "steps": [
+        "Navigate to /sitemap.xml",
+        "Verify XML sitemap exists",
+        "Verify all pages listed",
+        "Submit to Google Search Console"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "seo-robots-txt",
+      "category": "seo",
+      "priority": 128,
+      "description": "Robots.txt configured",
+      "steps": [
+        "Navigate to /robots.txt",
+        "Verify robots.txt exists",
+        "Verify allows crawling",
+        "Verify sitemap URL included"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "performance-lighthouse-score",
+      "category": "performance",
+      "priority": 129,
+      "description": "Lighthouse performance score >90",
+      "steps": [
+        "Run Lighthouse audit on /",
+        "Verify performance score >90",
+        "Fix any performance issues",
+        "Re-run and verify score"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "performance-image-optimization",
+      "category": "performance",
+      "priority": 130,
+      "description": "Images optimized with Next.js Image",
+      "steps": [
+        "Audit all images",
+        "Verify all use next/image component",
+        "Verify lazy loading enabled",
+        "Verify WebP format served when supported"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "performance-code-splitting",
+      "category": "performance",
+      "priority": 131,
+      "description": "Code splitting for routes",
+      "steps": [
+        "Build for production",
+        "Analyze bundle with next/bundle-analyzer",
+        "Verify each route has separate chunk",
+        "Verify common code in shared chunk"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "testing-unit-tests",
+      "category": "testing",
+      "priority": 132,
+      "description": "Unit tests for utility functions",
+      "steps": [
+        "Write tests for score calculation function",
+        "Write tests for validation functions",
+        "Run tests with npm test",
+        "Verify all tests pass"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "testing-integration-tests",
+      "category": "testing",
+      "priority": 133,
+      "description": "Integration tests for API routes",
+      "steps": [
+        "Write tests for /api/pdf/generate",
+        "Write tests for file upload APIs",
+        "Run tests",
+        "Verify all tests pass"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "testing-e2e-onboarding",
+      "category": "testing",
+      "priority": 134,
+      "description": "End-to-end test for onboarding flow",
+      "steps": [
+        "Write Playwright test",
+        "Sign up new user",
+        "Complete onboarding Page 1",
+        "Complete onboarding Page 2",
+        "Verify redirect to /questionnaire"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "testing-e2e-questionnaire",
+      "category": "testing",
+      "priority": 135,
+      "description": "End-to-end test for questionnaire flow",
+      "steps": [
+        "Write Playwright test",
+        "Complete onboarding",
+        "Answer all questionnaire questions",
+        "Upload documents",
+        "Click Complete",
+        "Verify redirect to /dashboard"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "testing-e2e-pdf-export",
+      "category": "testing",
+      "priority": 136,
+      "description": "End-to-end test for PDF export",
+      "steps": [
+        "Write Playwright test",
+        "Complete questionnaire",
+        "Add customer",
+        "Export PDF",
+        "Verify PDF downloads",
+        "Verify PDF in export history"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "security-input-sanitization",
+      "category": "security",
+      "priority": 137,
+      "description": "User inputs sanitized",
+      "steps": [
+        "Test XSS attack vectors in text inputs",
+        "Verify inputs escaped in database",
+        "Verify inputs escaped in PDF output",
+        "Verify no script execution"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "security-sql-injection",
+      "category": "security",
+      "priority": 138,
+      "description": "SQL injection prevention",
+      "steps": [
+        "Test SQL injection in all inputs",
+        "Verify parameterized queries used",
+        "Verify Supabase client prevents injection"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "security-file-upload",
+      "category": "security",
+      "priority": 139,
+      "description": "File upload security",
+      "steps": [
+        "Try uploading executable files",
+        "Verify only PDFs allowed",
+        "Try uploading oversized files",
+        "Verify size limit enforced",
+        "Verify virus scanning (if implemented)"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "security-rate-limiting",
+      "category": "security",
+      "priority": 140,
+      "description": "Rate limiting on API routes",
+      "steps": [
+        "Make 100 requests to /api/pdf/generate",
+        "Verify rate limit kicks in after threshold",
+        "Verify 429 status code returned",
+        "Verify user-friendly error message"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "analytics-google-analytics",
+      "category": "analytics",
+      "priority": 141,
+      "description": "Google Analytics configured",
+      "steps": [
+        "Add GA4 tracking code",
+        "Verify pageviews tracked",
+        "Verify events tracked (sign-ups, exports)",
+        "Check GA dashboard for data"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "analytics-conversion-tracking",
+      "category": "analytics",
+      "priority": 142,
+      "description": "Conversion events tracked",
+      "steps": [
+        "Track 'sign_up' event",
+        "Track 'onboarding_complete' event",
+        "Track 'questionnaire_complete' event",
+        "Track 'pdf_export' event",
+        "Verify events in GA dashboard"
+      ],
+      "passes": false,
+      "blocked_by": ["analytics-google-analytics"],
+      "notes": ""
+    },
+    {
+      "id": "documentation-readme",
+      "category": "documentation",
+      "priority": 143,
+      "description": "README.md with setup instructions",
+      "steps": [
+        "Update README with:",
+        "- Project description",
+        "- Setup instructions",
+        "- Environment variables list",
+        "- Development commands",
+        "- Deployment guide"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "documentation-api-docs",
+      "category": "documentation",
+      "priority": 144,
+      "description": "API documentation",
+      "steps": [
+        "Document all API routes",
+        "Include request/response examples",
+        "Document authentication requirements",
+        "Add to /docs folder"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "documentation-user-guide",
+      "category": "documentation",
+      "priority": 145,
+      "description": "User guide for vendors",
+      "steps": [
+        "Create user guide with screenshots",
+        "Include onboarding walkthrough",
+        "Include questionnaire tips",
+        "Include PDF export instructions",
+        "Host at /docs/user-guide"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "mobile-touch-interactions",
+      "category": "mobile",
+      "priority": 146,
+      "description": "Touch interactions optimized",
+      "steps": [
+        "Test on actual mobile device",
+        "Verify buttons have adequate touch targets (44px min)",
+        "Verify swipe gestures work",
+        "Verify no accidental clicks"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "mobile-viewport-meta",
+      "category": "mobile",
+      "priority": 147,
+      "description": "Viewport meta tag configured",
+      "steps": [
+        "View source",
+        "Verify viewport meta tag present",
+        "Verify width=device-width",
+        "Verify initial-scale=1"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "mobile-ios-safari-testing",
+      "category": "mobile",
+      "priority": 148,
+      "description": "iOS Safari testing",
+      "steps": [
+        "Test on iPhone Safari",
+        "Verify all features work",
+        "Verify file upload works",
+        "Verify PDF download works"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "mobile-android-chrome-testing",
+      "category": "mobile",
+      "priority": 149,
+      "description": "Android Chrome testing",
+      "steps": [
+        "Test on Android Chrome",
+        "Verify all features work",
+        "Verify file upload works",
+        "Verify PDF download works"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "email-notifications-setup",
+      "category": "notifications",
+      "priority": 150,
+      "description": "Email notification system configured",
+      "steps": [
+        "Configure email service (SendGrid/Resend)",
+        "Create email templates",
+        "Test sending email",
+        "Verify delivery"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "email-welcome-email",
+      "category": "notifications",
+      "priority": 151,
+      "description": "Welcome email on sign-up",
+      "steps": [
+        "Sign up new user",
+        "Verify welcome email sent",
+        "Verify email styled with brand colors",
+        "Verify CTA link works"
+      ],
+      "passes": false,
+      "blocked_by": ["email-notifications-setup"],
+      "notes": ""
+    },
+    {
+      "id": "email-export-notification",
+      "category": "notifications",
+      "priority": 152,
+      "description": "Email notification on PDF export",
+      "steps": [
+        "Export PDF",
+        "Verify email sent to vendor",
+        "Verify email includes download link",
+        "Verify link works"
+      ],
+      "passes": false,
+      "blocked_by": ["email-notifications-setup"],
+      "notes": ""
+    },
+    {
+      "id": "backup-database-backups",
+      "category": "backup",
+      "priority": 153,
+      "description": "Automated database backups",
+      "steps": [
+        "Configure Supabase automated backups",
+        "Verify backups run daily",
+        "Test restore from backup"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "backup-file-backups",
+      "category": "backup",
+      "priority": 154,
+      "description": "Automated file storage backups",
+      "steps": [
+        "Configure Supabase Storage backups",
+        "Verify uploaded files backed up",
+        "Test restore from backup"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "monitoring-error-tracking",
+      "category": "monitoring",
+      "priority": 155,
+      "description": "Error tracking with Sentry",
+      "steps": [
+        "Install Sentry",
+        "Configure Sentry in production",
+        "Trigger test error",
+        "Verify error appears in Sentry dashboard"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "monitoring-uptime-monitoring",
+      "category": "monitoring",
+      "priority": 156,
+      "description": "Uptime monitoring",
+      "steps": [
+        "Configure uptime monitor (Vercel/UptimeRobot)",
+        "Set up alerts for downtime",
+        "Test alert by simulating downtime"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "pricing-page-layout",
+      "category": "pricing",
+      "priority": 157,
+      "description": "Pricing page with 3 tiers",
+      "steps": [
+        "Navigate to /pricing",
+        "Verify 3 pricing tiers displayed",
+        "Verify features listed per tier",
+        "Verify CTA buttons",
+        "Verify responsive layout"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": "Tiers: Free (5 exports/mo), Pro ($49/mo unlimited), Enterprise (custom)"
+    },
+    {
+      "id": "pricing-stripe-integration",
+      "category": "pricing",
+      "priority": 158,
+      "description": "Stripe integration for payments",
+      "steps": [
+        "Install Stripe SDK",
+        "Configure Stripe API keys",
+        "Create checkout session",
+        "Test payment flow",
+        "Verify subscription created"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "pricing-subscription-management",
+      "category": "pricing",
+      "priority": 159,
+      "description": "Subscription management in dashboard",
+      "steps": [
+        "Subscribe to Pro plan",
+        "Navigate to /dashboard Settings",
+        "Verify current plan shown",
+        "Click 'Manage Subscription'",
+        "Verify Stripe customer portal opens"
+      ],
+      "passes": false,
+      "blocked_by": ["pricing-stripe-integration"],
+      "notes": ""
+    },
+    {
+      "id": "pricing-export-limits",
+      "category": "pricing",
+      "priority": 160,
+      "description": "Export limits enforced by plan",
+      "steps": [
+        "Sign up for Free plan",
+        "Export 5 PDFs",
+        "Try to export 6th PDF",
+        "Verify upgrade prompt appears",
+        "Upgrade to Pro",
+        "Verify unlimited exports"
+      ],
+      "passes": false,
+      "blocked_by": ["pricing-stripe-integration"],
+      "notes": ""
+    },
+    {
+      "id": "admin-panel-access",
+      "category": "admin",
+      "priority": 161,
+      "description": "Admin panel accessible to admin users",
+      "steps": [
+        "Sign in as admin user",
+        "Navigate to /admin",
+        "Verify admin dashboard loads",
+        "Sign in as regular user",
+        "Try to access /admin",
+        "Verify access denied"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "admin-vendor-list",
+      "category": "admin",
+      "priority": 162,
+      "description": "Admin can view all vendors",
+      "steps": [
+        "Sign in as admin",
+        "Navigate to /admin/vendors",
+        "Verify list of all vendors",
+        "Verify search functionality",
+        "Verify sorting by date, company name"
+      ],
+      "passes": false,
+      "blocked_by": ["admin-panel-access"],
+      "notes": ""
+    },
+    {
+      "id": "admin-vendor-details",
+      "category": "admin",
+      "priority": 163,
+      "description": "Admin can view vendor details",
+      "steps": [
+        "Navigate to /admin/vendors",
+        "Click vendor name",
+        "Verify vendor profile shown",
+        "Verify questionnaire responses shown",
+        "Verify export history shown"
+      ],
+      "passes": false,
+      "blocked_by": ["admin-vendor-list"],
+      "notes": ""
+    },
+    {
+      "id": "admin-export-stats",
+      "category": "admin",
+      "priority": 164,
+      "description": "Admin dashboard shows export statistics",
+      "steps": [
+        "Navigate to /admin",
+        "Verify total exports count",
+        "Verify exports by plan tier",
+        "Verify chart showing exports over time"
+      ],
+      "passes": false,
+      "blocked_by": ["admin-panel-access"],
+      "notes": ""
+    },
+    {
+      "id": "compliance-gdpr",
+      "category": "compliance",
+      "priority": 165,
+      "description": "GDPR compliance features",
+      "steps": [
+        "Implement data export for users",
+        "Implement data deletion for users",
+        "Add cookie consent banner",
+        "Add privacy policy page"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "compliance-privacy-policy",
+      "category": "compliance",
+      "priority": 166,
+      "description": "Privacy policy page",
+      "steps": [
+        "Create /privacy page",
+        "Write privacy policy",
+        "Link from footer",
+        "Verify accessible"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "compliance-terms-of-service",
+      "category": "compliance",
+      "priority": 167,
+      "description": "Terms of service page",
+      "steps": [
+        "Create /terms page",
+        "Write terms of service",
+        "Link from footer",
+        "Verify accessible"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "help-documentation-link",
+      "category": "help",
+      "priority": 168,
+      "description": "Help/Documentation link in navigation",
+      "steps": [
+        "Add Help link to header nav",
+        "Link to /docs",
+        "Verify link works"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "help-faq-page",
+      "category": "help",
+      "priority": 169,
+      "description": "FAQ page with common questions",
+      "steps": [
+        "Create /faq page",
+        "Add 10+ common questions and answers",
+        "Implement accordion UI",
+        "Link from footer"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "help-contact-form",
+      "category": "help",
+      "priority": 170,
+      "description": "Contact form for support",
+      "steps": [
+        "Create /contact page",
+        "Add contact form (name, email, message)",
+        "Implement email sending on submit",
+        "Add success message"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "edge-case-long-company-names",
+      "category": "edge-cases",
+      "priority": 171,
+      "description": "Handle very long company names",
+      "steps": [
+        "Enter company name with 100+ characters",
+        "Verify text truncates in UI",
+        "Verify full name shown on hover/tooltip",
+        "Verify full name in PDF"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "edge-case-special-characters",
+      "category": "edge-cases",
+      "priority": 172,
+      "description": "Handle special characters in inputs",
+      "steps": [
+        "Enter company name with special chars: &, <, >, etc.",
+        "Verify saved correctly",
+        "Verify displayed correctly (escaped)",
+        "Verify appears correctly in PDF"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "edge-case-no-work-types",
+      "category": "edge-cases",
+      "priority": 173,
+      "description": "Handle vendor with no work types selected",
+      "steps": [
+        "Try to complete onboarding without selecting work type",
+        "Verify validation error",
+        "Verify cannot proceed"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "edge-case-all-no-answers",
+      "category": "edge-cases",
+      "priority": 174,
+      "description": "Handle questionnaire with all 'No' answers",
+      "steps": [
+        "Answer all questions with 'No'",
+        "Complete questionnaire",
+        "Navigate to dashboard",
+        "Verify score calculated correctly (0 or very low)",
+        "Verify action items listed"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "edge-case-pdf-generation-timeout",
+      "category": "edge-cases",
+      "priority": 175,
+      "description": "Handle PDF generation timeout",
+      "steps": [
+        "Simulate slow PDF generation (>30s)",
+        "Verify timeout error shown",
+        "Verify user can retry",
+        "Verify no partial PDF saved"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "edge-case-concurrent-exports",
+      "category": "edge-cases",
+      "priority": 176,
+      "description": "Handle multiple concurrent PDF exports",
+      "steps": [
+        "Click Export PDF for 3 customers simultaneously",
+        "Verify all 3 PDFs generate",
+        "Verify no race conditions",
+        "Verify all saved correctly"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "edge-case-session-timeout",
+      "category": "edge-cases",
+      "priority": 177,
+      "description": "Handle session timeout during questionnaire",
+      "steps": [
+        "Start questionnaire",
+        "Wait for session to expire (30min+)",
+        "Try to answer question",
+        "Verify redirect to sign-in",
+        "Sign in again",
+        "Verify progress preserved"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "optimization-database-indexes",
+      "category": "optimization",
+      "priority": 178,
+      "description": "Database indexes on frequently queried columns",
+      "steps": [
+        "Add index on vendors.clerk_user_id",
+        "Add index on questionnaire_responses.vendor_id",
+        "Add index on customers.vendor_id",
+        "Verify query performance improved"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "optimization-api-response-caching",
+      "category": "optimization",
+      "priority": 179,
+      "description": "API response caching for dashboard data",
+      "steps": [
+        "Implement caching for dashboard API",
+        "Set cache TTL to 5 minutes",
+        "Verify cache hit on repeat requests",
+        "Verify cache invalidated on data change"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "optimization-pdf-generation-queue",
+      "category": "optimization",
+      "priority": 180,
+      "description": "Background job queue for PDF generation",
+      "steps": [
+        "Implement job queue (BullMQ or similar)",
+        "Queue PDF generation requests",
+        "Process in background",
+        "Notify user on completion"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "localization-date-formatting",
+      "category": "localization",
+      "priority": 181,
+      "description": "Localized date formatting",
+      "steps": [
+        "Implement date formatting library",
+        "Format all dates consistently",
+        "Support user's locale",
+        "Test with different locales"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "localization-number-formatting",
+      "category": "localization",
+      "priority": 182,
+      "description": "Localized number formatting",
+      "steps": [
+        "Format currency with correct locale",
+        "Format large numbers with commas/periods",
+        "Test with different locales"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "export-csv-download",
+      "category": "export",
+      "priority": 183,
+      "description": "CSV export of questionnaire responses",
+      "steps": [
+        "Add 'Export CSV' button to dashboard",
+        "Click button",
+        "Verify CSV file downloads",
+        "Verify all questions and answers in CSV",
+        "Verify proper formatting"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "export-excel-download",
+      "category": "export",
+      "priority": 184,
+      "description": "Excel export of questionnaire responses",
+      "steps": [
+        "Add 'Export Excel' button to dashboard",
+        "Click button",
+        "Verify .xlsx file downloads",
+        "Verify all data in Excel",
+        "Verify formatting preserved"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "search-vendor-search",
+      "category": "search",
+      "priority": 185,
+      "description": "Search functionality in admin panel",
+      "steps": [
+        "Navigate to /admin/vendors",
+        "Enter company name in search",
+        "Verify filtered results",
+        "Search by email",
+        "Verify filtered results"
+      ],
+      "passes": false,
+      "blocked_by": ["admin-vendor-list"],
+      "notes": ""
+    },
+    {
+      "id": "search-customer-search",
+      "category": "search",
+      "priority": 186,
+      "description": "Search customers in dashboard",
+      "steps": [
+        "Navigate to /dashboard Customers tab",
+        "Add 10+ customers",
+        "Enter customer name in search",
+        "Verify filtered results"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-customer-management"],
+      "notes": ""
+    },
+    {
+      "id": "bulk-customer-import",
+      "category": "bulk-operations",
+      "priority": 187,
+      "description": "Bulk import customers via CSV",
+      "steps": [
+        "Navigate to /dashboard Customers tab",
+        "Click 'Import CSV'",
+        "Upload CSV with customer names",
+        "Verify all customers imported",
+        "Verify saved to customers table"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-customer-management"],
+      "notes": ""
+    },
+    {
+      "id": "bulk-pdf-export",
+      "category": "bulk-operations",
+      "priority": 188,
+      "description": "Bulk export PDFs for multiple customers",
+      "steps": [
+        "Navigate to /dashboard Customers tab",
+        "Select 5 customers",
+        "Click 'Export All PDFs'",
+        "Verify all 5 PDFs generate",
+        "Verify download as ZIP file"
+      ],
+      "passes": false,
+      "blocked_by": ["dashboard-customer-management"],
+      "notes": ""
+    },
+    {
+      "id": "notification-preferences",
+      "category": "preferences",
+      "priority": 189,
+      "description": "User notification preferences",
+      "steps": [
+        "Navigate to /dashboard Settings",
+        "Toggle email notifications on/off",
+        "Verify preference saved",
+        "Export PDF with notifications off",
+        "Verify no email sent"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "theme-dark-mode",
+      "category": "preferences",
+      "priority": 190,
+      "description": "Dark mode toggle (optional)",
+      "steps": [
+        "Add dark mode toggle to settings",
+        "Toggle dark mode on",
+        "Verify colors invert",
+        "Verify Trust Blue still primary",
+        "Verify readable contrast"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": "Optional feature - low priority"
+    },
+    {
+      "id": "integration-zapier",
+      "category": "integrations",
+      "priority": 191,
+      "description": "Zapier integration for webhooks",
+      "steps": [
+        "Create webhook endpoint /api/webhooks/zapier",
+        "Trigger on PDF export",
+        "Send export data to Zapier",
+        "Test integration with Zapier"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": "Optional feature"
+    },
+    {
+      "id": "integration-salesforce",
+      "category": "integrations",
+      "priority": 192,
+      "description": "Salesforce integration (enterprise)",
+      "steps": [
+        "Create Salesforce OAuth connection",
+        "Sync customers from Salesforce",
+        "Push compliance scores to Salesforce",
+        "Test bidirectional sync"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": "Enterprise feature only"
+    },
+    {
+      "id": "wizard-onboarding-wizard",
+      "category": "wizard",
+      "priority": 193,
+      "description": "Interactive onboarding wizard/tooltip",
+      "steps": [
+        "Sign up new user",
+        "Verify welcome wizard appears",
+        "Step through wizard tooltips",
+        "Verify highlights key features",
+        "Can dismiss and not show again"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "wizard-questionnaire-help",
+      "category": "wizard",
+      "priority": 194,
+      "description": "Help tooltips in questionnaire",
+      "steps": [
+        "Navigate to questionnaire",
+        "Hover over info icon next to question",
+        "Verify tooltip appears with explanation",
+        "Verify styled with Trust Blue"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "changelog-version-tracking",
+      "category": "changelog",
+      "priority": 195,
+      "description": "Changelog page with version history",
+      "steps": [
+        "Create /changelog page",
+        "List versions and features",
+        "Link from footer",
+        "Update with each release"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "release-beta-testing",
+      "category": "release",
+      "priority": 196,
+      "description": "Beta testing with real users",
+      "steps": [
+        "Recruit 5 beta testers",
+        "Provide access to staging environment",
+        "Collect feedback",
+        "Fix critical issues"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "release-soft-launch",
+      "category": "release",
+      "priority": 197,
+      "description": "Soft launch to limited audience",
+      "steps": [
+        "Launch to 50 users",
+        "Monitor error rates",
+        "Monitor performance",
+        "Collect feedback",
+        "Fix any issues"
+      ],
+      "passes": false,
+      "blocked_by": ["release-beta-testing"],
+      "notes": ""
+    },
+    {
+      "id": "release-public-launch",
+      "category": "release",
+      "priority": 198,
+      "description": "Public launch",
+      "steps": [
+        "Announce on social media",
+        "Submit to Product Hunt",
+        "Send email to waitlist",
+        "Monitor traffic spike",
+        "Verify everything stable"
+      ],
+      "passes": false,
+      "blocked_by": ["release-soft-launch"],
+      "notes": ""
+    },
+    {
+      "id": "marketing-landing-page-seo",
+      "category": "marketing",
+      "priority": 199,
+      "description": "Landing page SEO optimization",
+      "steps": [
+        "Optimize title and meta description",
+        "Add schema.org markup",
+        "Optimize images with alt text",
+        "Verify Google Search Console"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    },
+    {
+      "id": "marketing-social-sharing",
+      "category": "marketing",
+      "priority": 200,
+      "description": "Social media sharing buttons",
+      "steps": [
+        "Add share buttons to dashboard",
+        "Test Twitter share",
+        "Test LinkedIn share",
+        "Verify Open Graph tags",
+        "Verify Twitter Cards"
+      ],
+      "passes": false,
+      "blocked_by": [],
+      "notes": ""
+    }
+  ]
+}
