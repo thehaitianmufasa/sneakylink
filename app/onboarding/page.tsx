@@ -19,6 +19,7 @@ export default function OnboardingPage() {
   const [errors, setErrors] = useState({
     companyName: '',
     employeeCount: '',
+    workTypes: '',
   })
   const [isSaving, setIsSaving] = useState(false)
 
@@ -65,13 +66,23 @@ export default function OnboardingPage() {
     return true
   }
 
+  const validateWorkTypes = () => {
+    if (formData.workTypes.length === 0) {
+      setErrors(prev => ({ ...prev, workTypes: 'Please select at least one work type' }))
+      return false
+    }
+    setErrors(prev => ({ ...prev, workTypes: '' }))
+    return true
+  }
+
   const handleNext = () => {
     if (currentPage === 1) {
       // Validate before proceeding
       const isCompanyNameValid = validateCompanyName()
       const isEmployeeCountValid = validateEmployeeCount()
+      const isWorkTypesValid = validateWorkTypes()
 
-      if (!isCompanyNameValid || !isEmployeeCountValid) {
+      if (!isCompanyNameValid || !isEmployeeCountValid || !isWorkTypesValid) {
         return
       }
       setCurrentPage(2)
@@ -91,6 +102,10 @@ export default function OnboardingPage() {
         ? prev.workTypes.filter(t => t !== type)
         : [...prev.workTypes, type]
     }))
+    // Clear error when user makes a selection
+    if (errors.workTypes) {
+      setErrors(prev => ({ ...prev, workTypes: '' }))
+    }
   }
 
   return (
@@ -209,7 +224,11 @@ export default function OnboardingPage() {
                   ].map((workType) => (
                     <label
                       key={workType.id}
-                      className="flex items-center p-4 border border-gray-300 rounded-lg hover:border-trust-blue cursor-pointer transition-all"
+                      className={`flex items-center p-4 border rounded-lg hover:border-trust-blue cursor-pointer transition-all ${
+                        errors.workTypes
+                          ? 'border-danger-red'
+                          : 'border-gray-300'
+                      }`}
                     >
                       <input
                         type="checkbox"
@@ -223,6 +242,11 @@ export default function OnboardingPage() {
                     </label>
                   ))}
                 </div>
+                {errors.workTypes && (
+                  <p className="mt-2 text-sm text-danger-red font-medium">
+                    {errors.workTypes}
+                  </p>
+                )}
               </div>
 
               {/* Navigation Buttons */}

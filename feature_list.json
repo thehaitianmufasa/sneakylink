@@ -67,7 +67,7 @@
         "Test unchecking",
         "Verify at least one must be selected (validation)"
       ],
-      "passes": false,
+      "passes": true,
       "blocked_by": [
         "onboarding-page1-layout"
       ],
